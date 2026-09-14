@@ -1,0 +1,13 @@
+# Protège les fichiers binaires de toute conversion de fins de ligne (CRLF/LF).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.pdf binary
