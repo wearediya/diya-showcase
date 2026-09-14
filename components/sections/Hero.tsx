@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { PillButton } from "@/components/ui/PillButton";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Calendar, Chart } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
@@ -16,14 +16,16 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
             {dict.subtitle}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            {/* Principal : pilule sombre + badge rond flèche (style maquette) */}
-            <PillButton href="#download" className="w-full sm:w-auto">
-              {dict.primary}
-            </PillButton>
+            {/* Bascule clair/sombre (remplace le bouton de téléchargement) */}
+            <ThemeToggle
+              toDark={dict.darkMode}
+              toLight={dict.lightMode}
+              className="w-full sm:w-auto"
+            />
             {/* Secondaire : pilule menthe, texte foncé */}
             <a
               href="#features"
-              className="inline-flex h-[58px] w-full items-center justify-center rounded-full bg-mint-400 px-8 text-[15px] font-semibold text-ink transition-colors hover:bg-mint-strong sm:w-auto"
+              className="inline-flex h-[58px] w-full items-center justify-center rounded-full bg-mint-400 px-8 text-[15px] font-semibold text-brand-ink transition-colors hover:bg-mint-strong sm:w-auto"
             >
               {dict.secondary}
             </a>
@@ -41,7 +43,7 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
             />
 
             {/* Carte flottante haut-gauche : statistique (taux d'occupation) */}
-            <div className="absolute left-[-12%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-white p-4 shadow-xl sm:block">
+            <div className="absolute left-[-12%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-card p-4 shadow-xl sm:block">
               <div className="flex items-center justify-between">
                 <span className="text-[12.5px] font-medium text-muted">{dict.statsLabel}</span>
                 <span className="grid h-7 w-7 place-items-center rounded-lg bg-mint/60 text-brand">
@@ -60,7 +62,7 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
             </div>
 
             {/* Carte flottante bas-droite (réservation) */}
-            <div className="absolute right-[-9%] bottom-[18%] z-20 hidden w-[190px] rounded-2xl border border-line bg-white p-3.5 shadow-xl sm:block">
+            <div className="absolute right-[-9%] bottom-[18%] z-20 hidden w-[190px] rounded-2xl border border-line bg-card p-3.5 shadow-xl sm:block">
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-xl bg-mint/70 text-brand">
                   <Calendar className="h-4.5 w-4.5" />
@@ -87,7 +89,7 @@ function MiniDonut({ pct }: { pct: number }) {
   const c = 2 * Math.PI * r;
   return (
     <svg width="52" height="52" viewBox="0 0 52 52" className="shrink-0">
-      <circle cx="26" cy="26" r={r} fill="none" stroke="#e6ebe8" strokeWidth="7" />
+      <circle cx="26" cy="26" r={r} fill="none" stroke="var(--color-line)" strokeWidth="7" />
       <circle
         cx="26"
         cy="26"

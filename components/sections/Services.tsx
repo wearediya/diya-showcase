@@ -20,7 +20,7 @@ export function Services({ dict }: { dict: Dict["services"] }) {
             return (
               <div
                 key={card.title}
-                className="flex items-start gap-5 rounded-3xl border border-line bg-white p-6 sm:p-7"
+                className="flex items-start gap-5 rounded-3xl border border-line bg-card p-6 sm:p-7"
               >
                 <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand">
                   <Icon className="h-7 w-7" />

@@ -25,7 +25,9 @@
     "bookingValue": "Chambre 04 · 3 nuits",
     "statsLabel": "Taux d'occupation",
     "statsValue": "92%",
-    "statsSub": "37 logements occupés"
+    "statsSub": "37 logements occupés",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair"
   },
   "local": {
     "cards": [

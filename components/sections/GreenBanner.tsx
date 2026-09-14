@@ -5,7 +5,7 @@ import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
   return (
-    <section className="bg-gradient-to-b from-mint-400 to-mint py-20 sm:py-24">
+    <section className="theme-light bg-gradient-to-b from-mint-400 to-mint py-20 sm:py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink sm:text-[40px] sm:leading-[1.1]">

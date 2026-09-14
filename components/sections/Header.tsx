@@ -30,8 +30,8 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
     <header
       className={`sticky top-0 z-50 transition-colors ${
         scrolled
-          ? "border-b border-line bg-white/85 backdrop-blur-md"
-          : "border-b border-transparent bg-white/0"
+          ? "border-b border-line bg-bg/85 backdrop-blur-md"
+          : "border-b border-transparent bg-transparent"
       }`}
     >
       <Container className="flex h-16 items-center justify-between gap-4">
@@ -69,7 +69,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
       </Container>
 
       {open && (
-        <div className="border-t border-line bg-white md:hidden">
+        <div className="border-t border-line bg-bg md:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {links.map((l) => (
               <a
@@ -95,7 +95,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
 function LangSwitch({ lang }: { lang: Locale }) {
   const other: Locale = lang === "fr" ? "en" : "fr";
   return (
-    <div className="flex items-center rounded-full border border-line bg-white p-0.5 text-xs font-semibold">
+    <div className="flex items-center rounded-full border border-line bg-card p-0.5 text-xs font-semibold">
       <span className="rounded-full bg-brand px-2.5 py-1 text-white uppercase">
         {lang}
       </span>

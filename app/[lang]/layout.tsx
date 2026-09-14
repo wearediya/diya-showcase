@@ -54,8 +54,21 @@ export default async function RootLayout({
   if (!hasLocale(lang)) notFound();
 
   return (
-    <html lang={lang} className={`${jakarta.variable} h-full antialiased`}>
-      <body className="min-h-full bg-bg text-ink font-sans">{children}</body>
+    <html
+      lang={lang}
+      suppressHydrationWarning
+      className={`${jakarta.variable} h-full antialiased`}
+    >
+      <body className="min-h-full bg-bg text-ink font-sans">
+        <script
+          // Applique le thème mémorisé avant le rendu (évite le flash clair→sombre).
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(localStorage.getItem('diya-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

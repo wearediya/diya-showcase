@@ -22,7 +22,7 @@ export function Split({ dict }: { dict: Dict["split"] }) {
                 const Icon = icons[i] ?? Check;
                 return (
                   <li key={f.title} className="flex gap-4">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand shadow-sm ring-1 ring-line">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-card text-brand shadow-sm ring-1 ring-line">
                       <Icon className="h-5 w-5" />
                     </span>
                     <div>
@@ -38,7 +38,7 @@ export function Split({ dict }: { dict: Dict["split"] }) {
           {/* Carte quittance */}
           <div className="relative">
             <div className="glow-mint pointer-events-none absolute -inset-6 -z-0" />
-            <div className="relative mx-auto max-w-sm rounded-3xl border border-line bg-white p-6 shadow-[0_30px_70px_-30px_rgba(11,21,18,0.35)]">
+            <div className="relative mx-auto max-w-sm rounded-3xl border border-line bg-card p-6 shadow-[0_30px_70px_-30px_rgba(11,21,18,0.35)]">
               <div className="flex items-center justify-between">
                 <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand text-white">
                   <Receipt className="h-5 w-5" />

@@ -14,7 +14,7 @@ export function LocalReality({ dict }: { dict: Dict["local"] }) {
             return (
               <div
                 key={card.title}
-                className="group rounded-3xl border border-line bg-white p-6 transition-shadow hover:shadow-[0_20px_50px_-30px_rgba(11,21,18,0.4)]"
+                className="group rounded-3xl border border-line bg-card p-6 transition-shadow hover:shadow-[0_20px_50px_-30px_rgba(11,21,18,0.4)]"
               >
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mint/60 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                   <Icon className="h-6 w-6" />

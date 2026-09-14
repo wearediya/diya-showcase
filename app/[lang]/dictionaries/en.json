@@ -25,7 +25,9 @@
     "bookingValue": "Room 04 · 3 nights",
     "statsLabel": "Occupancy rate",
     "statsValue": "92%",
-    "statsSub": "37 units occupied"
+    "statsSub": "37 units occupied",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
   },
   "local": {
     "cards": [
