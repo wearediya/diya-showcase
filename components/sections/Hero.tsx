@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { PillButton } from "@/components/ui/PillButton";
 import { Calendar, Chart } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
@@ -16,12 +16,10 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
             {dict.subtitle}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            {/* Bascule clair/sombre (remplace le bouton de téléchargement) */}
-            <ThemeToggle
-              toDark={dict.darkMode}
-              toLight={dict.lightMode}
-              className="w-full sm:w-auto"
-            />
+            {/* Principal : pilule sombre + badge rond flèche (style maquette) */}
+            <PillButton href="#download" className="w-full sm:w-auto">
+              {dict.primary}
+            </PillButton>
             {/* Secondaire : pilule menthe, texte foncé */}
             <a
               href="#features"

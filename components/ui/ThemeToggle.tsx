@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "@/components/icons";
 
-/** Bascule clair/sombre : écrit `data-theme` sur <html> + mémorise le choix. */
+/** Bascule clair/sombre (icône) : écrit `data-theme` sur <html> + mémorise. */
 export function ThemeToggle({
   toDark,
   toLight,
@@ -37,10 +37,10 @@ export function ThemeToggle({
       type="button"
       onClick={toggle}
       aria-label={dark ? toLight : toDark}
-      className={`inline-flex h-[58px] items-center justify-center gap-2.5 rounded-full border border-line bg-card px-7 text-[15px] font-semibold text-ink transition-colors hover:bg-soft ${className}`}
+      title={dark ? toLight : toDark}
+      className={`grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line bg-card text-brand transition-colors hover:bg-soft ${className}`}
     >
-      {dark ? <Sun className="h-5 w-5 text-brand" /> : <Moon className="h-5 w-5 text-brand" />}
-      {dark ? toLight : toDark}
+      {dark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
     </button>
   );
 }

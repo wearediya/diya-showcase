@@ -8,7 +8,9 @@
     "testimonials": "Reviews",
     "faq": "FAQ",
     "download": "Download the app",
-    "menu": "Menu"
+    "menu": "Menu",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
   },
   "hero": {
     "title": "Rental management, simple and available everywhere.",
@@ -25,9 +27,7 @@
     "bookingValue": "Room 04 · 3 nights",
     "statsLabel": "Occupancy rate",
     "statsValue": "92%",
-    "statsSub": "37 units occupied",
-    "darkMode": "Dark mode",
-    "lightMode": "Light mode"
+    "statsSub": "37 units occupied"
   },
   "local": {
     "cards": [

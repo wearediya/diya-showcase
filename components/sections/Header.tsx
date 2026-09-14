@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Menu, Close, Download } from "@/components/icons";
 import type { Dict, Locale } from "@/app/[lang]/dictionaries";
 
@@ -53,10 +54,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
 
         <div className="flex items-center gap-2">
           <LangSwitch lang={lang} />
-          <Button href="#download" className="hidden sm:inline-flex">
-            <Download className="h-[18px] w-[18px]" />
-            {nav.download}
-          </Button>
+          <ThemeToggle toDark={nav.darkMode} toLight={nav.lightMode} />
           <button
             type="button"
             aria-label={nav.menu}
