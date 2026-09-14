@@ -23,12 +23,12 @@ export function LocalReality({ dict }: { dict: Dict["local"] }) {
   return (
     <section className="bg-soft py-16 sm:py-20">
       <Container>
-        {/* Mosaïque de tailles variées, jointive, formant un seul grand rectangle. */}
-        <div className="grid grid-cols-2 auto-rows-[172px] overflow-hidden rounded-3xl shadow-[0_30px_70px_-40px_rgba(11,21,18,0.55)] sm:auto-rows-[200px] lg:grid-cols-4 lg:auto-rows-[212px]">
+        {/* Mosaïque de tailles variées, espacées, formant un grand rectangle. */}
+        <div className="grid grid-cols-2 auto-rows-[172px] gap-3 sm:auto-rows-[200px] lg:grid-cols-4 lg:auto-rows-[212px]">
           {dict.cards.map((card, i) => (
             <article
               key={card.title}
-              className={`group relative overflow-hidden ${cardSpan[i] ?? ""}`}
+              className={`group relative overflow-hidden rounded-2xl shadow-[0_18px_45px_-28px_rgba(11,21,18,0.5)] ${cardSpan[i] ?? ""}`}
             >
               <Image
                 src={cardImages[i] ?? "/biens.jpg"}
@@ -38,7 +38,7 @@ export function LocalReality({ dict }: { dict: Dict["local"] }) {
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
               />
               {/* Dégradé pour la lisibilité du titre (renforcé au survol). */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/5 transition-colors duration-300 group-hover:from-black/90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent transition-colors duration-300 group-hover:from-black/72" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                 <h3 className="text-[17px] font-bold leading-tight drop-shadow-sm">
                   {card.title}
