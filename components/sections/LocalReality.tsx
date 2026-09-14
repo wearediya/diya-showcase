@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Wallet, WhatsApp, Phone, Building } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
@@ -7,14 +6,9 @@ const cardIcons = [Wallet, WhatsApp, Phone, Building];
 
 export function LocalReality({ dict }: { dict: Dict["local"] }) {
   return (
-    <section className="bg-soft py-20 sm:py-24">
+    <section className="bg-soft py-16 sm:py-20">
       <Container>
-        <SectionHeading
-          eyebrow="Togo"
-          title={dict.title}
-          subtitle={dict.subtitle}
-        />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {dict.cards.map((card, i) => {
             const Icon = cardIcons[i] ?? Building;
             return (
