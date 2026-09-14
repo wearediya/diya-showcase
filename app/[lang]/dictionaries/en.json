@@ -112,13 +112,13 @@
     "listTitle": "My properties",
     "unitsWord": "units",
     "createTitle": "New unit",
-    "fieldNumber": "Number",
-    "fieldType": "Type",
-    "fieldRent": "Monthly rent",
+    "fieldNumber": "Number / Unit name",
+    "fieldType": "Unit type",
+    "fieldRent": "Suggested rent",
+    "typeExample": "2-room apartment",
     "saveLabel": "Save",
     "occupied": "Occupied",
-    "tenantLabel": "Tenant",
-    "depositLabel": "Deposit"
+    "sinceLabel": "since"
   },
   "services": {
     "title": "Support that measures up",

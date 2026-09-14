@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { PillButton } from "@/components/ui/PillButton";
-import { Building, Wallet, Receipt } from "@/components/icons";
+import { Building, Stairs, DoorRooms, Bed, Bath } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
@@ -23,7 +23,7 @@ export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
           {/* Cartes = vrais bouts de l'app (masquées sur mobile). */}
           <PropertyListCard dict={dict} className="absolute left-0 top-4 z-20 hidden sm:block" />
           <CreateUnitCard dict={dict} className="absolute right-0 top-2 z-20 hidden sm:block" />
-          <UnitDetailCard dict={dict} className="absolute bottom-2 left-6 z-20 hidden lg:block" />
+          <UnitDetailCard dict={dict} className="absolute bottom-2 left-4 z-20 hidden lg:block" />
 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -69,13 +69,13 @@ function PropertyListCard({ dict, className }: { dict: Dict["banner"]; className
   );
 }
 
-/* Création d'un logement (façon formulaire de l'app). */
+/* Création d'un logement (formulaire réel de l'app). */
 function CreateUnitCard({ dict, className }: { dict: Dict["banner"]; className?: string }) {
   return (
-    <div className={`w-[208px] rounded-2xl border border-line bg-white p-4 shadow-xl ${className ?? ""}`}>
+    <div className={`w-[214px] rounded-2xl border border-line bg-white p-4 shadow-xl ${className ?? ""}`}>
       <div className="mb-3 text-[12.5px] font-bold text-ink">{dict.createTitle}</div>
-      <Field label={dict.fieldNumber} value="Appartement B2" />
-      <Field label={dict.fieldType} value="Meublé" className="mt-2.5" />
+      <Field label={dict.fieldNumber} value="Apt 102" />
+      <Field label={dict.fieldType} value={dict.typeExample} select className="mt-2.5" />
       <Field label={dict.fieldRent} value="150 000 FCFA" className="mt-2.5" />
       <button className="mt-4 w-full rounded-full bg-brand py-2 text-[12.5px] font-semibold text-white">
         {dict.saveLabel}
@@ -84,77 +84,69 @@ function CreateUnitCard({ dict, className }: { dict: Dict["banner"]; className?:
   );
 }
 
-function Field({ label, value, className }: { label: string; value: string; className?: string }) {
+function Field({
+  label,
+  value,
+  className,
+  select = false,
+}: {
+  label: string;
+  value: string;
+  className?: string;
+  select?: boolean;
+}) {
   return (
     <div className={className}>
       <div className="mb-1 text-[10px] font-medium text-muted">{label}</div>
-      <div className="rounded-lg border border-line px-2.5 py-1.5 text-[12px] font-semibold text-ink">
-        {value}
+      <div className="flex items-center justify-between gap-1 rounded-lg border border-line px-2.5 py-1.5 text-[12px] font-semibold text-ink">
+        <span className="truncate">{value}</span>
+        {select && (
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-muted">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        )}
       </div>
     </div>
   );
 }
 
-/* Fiche d'un logement (façon page détail de l'app). */
+/* Fiche d'un logement (page détail réelle : type + statut, occupant, specs). */
 function UnitDetailCard({ dict, className }: { dict: Dict["banner"]; className?: string }) {
   return (
-    <div className={`w-[224px] rounded-2xl border border-line bg-white p-4 shadow-xl ${className ?? ""}`}>
-      <div className="flex items-center justify-between">
-        <span className="text-[13px] font-bold text-ink">Appartement B2</span>
-        <span className="inline-flex items-center gap-1 rounded-full bg-mint/70 px-2 py-0.5 text-[10.5px] font-bold text-brand-ink">
+    <div className={`w-[232px] rounded-2xl border border-line bg-white p-4 shadow-xl ${className ?? ""}`}>
+      <div className="flex items-center justify-between gap-2">
+        <span className="truncate text-[12.5px] font-bold text-ink">{dict.typeExample}</span>
+        <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-mint/70 px-2 py-0.5 text-[10px] font-bold text-brand-ink">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
           {dict.occupied}
         </span>
       </div>
-      <div className="mt-3 space-y-2.5">
-        <InfoRow
-          badge={
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-mint/70 text-brand">
-              <Wallet className="h-4 w-4" />
-            </span>
-          }
-          label={dict.fieldRent}
-          value="150 000 FCFA"
-        />
-        <InfoRow
-          badge={
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-mint/70 text-brand">
-              <Receipt className="h-4 w-4" />
-            </span>
-          }
-          label={dict.depositLabel}
-          value="300 000 FCFA"
-        />
-        <InfoRow
-          badge={
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-mint/70 text-[10px] font-bold text-brand-ink">
-              KA
-            </span>
-          }
-          label={dict.tenantLabel}
-          value="Kodjo A."
-        />
+
+      <div className="mt-3 flex items-center gap-2.5">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-mint/70 text-[11px] font-bold text-brand-ink">
+          KA
+        </span>
+        <div className="min-w-0">
+          <div className="text-[12.5px] font-semibold text-ink">Kodjo A.</div>
+          <div className="text-[10.5px] text-muted">150 000 FCFA · {dict.sinceLabel} 2024</div>
+        </div>
+      </div>
+
+      <div className="mt-3 flex items-center justify-between border-t border-line pt-3">
+        <Spec icon={<Stairs className="h-4 w-4" />} n="1" />
+        <Spec icon={<DoorRooms className="h-4 w-4" />} n="3" />
+        <Spec icon={<Bed className="h-4 w-4" />} n="2" />
+        <Spec icon={<Bath className="h-4 w-4" />} n="1" />
       </div>
     </div>
   );
 }
 
-function InfoRow({
-  badge,
-  label,
-  value,
-}: {
-  badge: React.ReactNode;
-  label: string;
-  value: string;
-}) {
+function Spec({ icon, n }: { icon: React.ReactNode; n: string }) {
   return (
-    <div className="flex items-center gap-2.5">
-      {badge}
-      <div className="min-w-0 flex-1">
-        <div className="text-[10px] text-muted">{label}</div>
-        <div className="text-[12px] font-semibold text-ink">{value}</div>
-      </div>
-    </div>
+    <span className="inline-flex items-center gap-1 text-[11.5px] font-semibold text-ink">
+      <span className="text-brand">{icon}</span>
+      {n}
+    </span>
   );
 }

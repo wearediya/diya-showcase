@@ -112,13 +112,13 @@
     "listTitle": "Mes biens",
     "unitsWord": "logements",
     "createTitle": "Nouveau logement",
-    "fieldNumber": "Numéro",
-    "fieldType": "Type",
-    "fieldRent": "Loyer mensuel",
+    "fieldNumber": "Numéro / Nom du logement",
+    "fieldType": "Type de logement",
+    "fieldRent": "Loyer conseillé",
+    "typeExample": "Appartement 2 pièces",
     "saveLabel": "Enregistrer",
     "occupied": "Occupé",
-    "tenantLabel": "Locataire",
-    "depositLabel": "Caution"
+    "sinceLabel": "depuis"
   },
   "services": {
     "title": "Un accompagnement à la hauteur",
