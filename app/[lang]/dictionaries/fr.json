@@ -116,16 +116,19 @@
     "fieldType": "Type de logement",
     "fieldRent": "Loyer conseillé",
     "typeExample": "Appartement 2 pièces",
-    "saveLabel": "Enregistrer",
+    "saveLabel": "Enregistrer"
+  },
+  "units": {
     "vacant": "Vacant",
+    "occupied": "Occupé",
     "yes": "Oui",
     "no": "Non",
-    "specFloor": "Étage",
-    "specRooms": "Pièces",
-    "specBeds": "Chambres",
-    "specBaths": "Salles de bain",
-    "specFurnished": "Meublé",
-    "specWifi": "Connexion internet"
+    "floor": "Étage",
+    "rooms": "Pièces",
+    "beds": "Chambres",
+    "baths": "Salles de bain",
+    "furnished": "Meublé",
+    "wifi": "Connexion internet"
   },
   "services": {
     "title": "Un accompagnement à la hauteur",

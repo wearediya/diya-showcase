@@ -116,16 +116,19 @@
     "fieldType": "Unit type",
     "fieldRent": "Suggested rent",
     "typeExample": "2-room apartment",
-    "saveLabel": "Save",
+    "saveLabel": "Save"
+  },
+  "units": {
     "vacant": "Vacant",
+    "occupied": "Occupied",
     "yes": "Yes",
     "no": "No",
-    "specFloor": "Floor",
-    "specRooms": "Rooms",
-    "specBeds": "Bedrooms",
-    "specBaths": "Bathrooms",
-    "specFurnished": "Furnished",
-    "specWifi": "Internet"
+    "floor": "Floor",
+    "rooms": "Rooms",
+    "beds": "Bedrooms",
+    "baths": "Bathrooms",
+    "furnished": "Furnished",
+    "wifi": "Internet"
   },
   "services": {
     "title": "Support that measures up",

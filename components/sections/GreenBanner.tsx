@@ -1,9 +1,25 @@
 import { Container } from "@/components/ui/Container";
 import { PillButton } from "@/components/ui/PillButton";
+import { UnitSpecCard, type UnitSpec } from "@/components/ui/UnitSpecCard";
 import { Building, Stairs, DoorRooms, Bed, Bath, Sofa, Wifi } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
-export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
+export function GreenBanner({
+  dict,
+  units,
+}: {
+  dict: Dict["banner"];
+  units: Dict["units"];
+}) {
+  const specs: UnitSpec[] = [
+    { icon: <Stairs className="h-4 w-4" />, value: "0", label: units.floor },
+    { icon: <DoorRooms className="h-4 w-4" />, value: "2", label: units.rooms },
+    { icon: <Bed className="h-4 w-4" />, value: "1", label: units.beds },
+    { icon: <Bath className="h-4 w-4" />, value: "1", label: units.baths },
+    { icon: <Sofa className="h-4 w-4" />, value: units.no, label: units.furnished },
+    { icon: <Wifi className="h-4 w-4" />, value: units.yes, label: units.wifi },
+  ];
+
   return (
     <section className="theme-light bg-gradient-to-b from-mint-400 to-mint py-20 sm:py-24">
       <Container>
@@ -23,7 +39,13 @@ export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
           {/* Cartes = vrais bouts de l'app (masquées sur mobile). */}
           <PropertyListCard dict={dict} className="absolute left-0 top-4 z-20 hidden sm:block" />
           <CreateUnitCard dict={dict} className="absolute right-0 top-2 z-20 hidden sm:block" />
-          <UnitDetailCard dict={dict} className="absolute bottom-2 left-4 z-20 hidden lg:block" />
+          <UnitSpecCard
+            name="Boutique B3"
+            status={units.vacant}
+            specs={specs}
+            width={242}
+            className="absolute bottom-0 left-0 z-20 hidden lg:block"
+          />
 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -105,41 +127,6 @@ function Field({
             <path d="m6 9 6 6 6-6" />
           </svg>
         )}
-      </div>
-    </div>
-  );
-}
-
-/* Fiche d'un logement (page détail réelle : en-tête + grille de spec-cards). */
-function UnitDetailCard({ dict, className }: { dict: Dict["banner"]; className?: string }) {
-  const specs = [
-    { icon: <Stairs className="h-4 w-4" />, value: "0", label: dict.specFloor },
-    { icon: <DoorRooms className="h-4 w-4" />, value: "2", label: dict.specRooms },
-    { icon: <Bed className="h-4 w-4" />, value: "1", label: dict.specBeds },
-    { icon: <Bath className="h-4 w-4" />, value: "1", label: dict.specBaths },
-    { icon: <Sofa className="h-4 w-4" />, value: dict.no, label: dict.specFurnished },
-    { icon: <Wifi className="h-4 w-4" />, value: dict.yes, label: dict.specWifi },
-  ];
-  return (
-    <div className={`w-[250px] rounded-2xl border border-line bg-white p-3.5 shadow-xl ${className ?? ""}`}>
-      <div className="mb-2.5 flex items-center justify-between gap-2">
-        <span className="truncate text-[13px] font-extrabold text-ink">Boutique B3</span>
-        <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-mint/70 px-2 py-0.5 text-[10px] font-bold text-brand-ink">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-          {dict.vacant}
-        </span>
-      </div>
-      <div className="grid grid-cols-3 gap-1.5">
-        {specs.map((s) => (
-          <div
-            key={s.label}
-            className="flex flex-col items-center rounded-xl bg-soft/80 px-1 py-2 text-center"
-          >
-            <span className="text-brand">{s.icon}</span>
-            <span className="mt-1 text-[13px] font-extrabold leading-none text-ink">{s.value}</span>
-            <span className="mt-0.5 text-[8px] leading-tight text-muted">{s.label}</span>
-          </div>
-        ))}
       </div>
     </div>
   );
