@@ -222,7 +222,7 @@
     "statValue": "1,231,560 CFA"
   },
   "footer": {
-    "tagline": "The rental-management app built for West Africa. Simple, offline, in CFA francs.",
+    "tagline": "The rental-management app built for West Africa. Simple, offline, multi-currency.",
     "columns": [
       {
         "title": "Product",
