@@ -107,3 +107,11 @@ body {
 }
 .animate-floaty { animation: floaty 6s ease-in-out infinite; }
 .animate-floaty-slow { animation: floaty 9s ease-in-out infinite; }
+
+/* Onde concentrique (cercle qui se propage puis s'estompe). */
+@keyframes ripple {
+  0% { transform: scale(0.35); opacity: 0.55; }
+  80% { opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+.animate-ripple { animation: ripple 3.6s ease-out infinite; }

@@ -14,13 +14,19 @@ export function Services({ dict }: { dict: Dict["services"] }) {
           title={dict.title}
           subtitle={dict.subtitle}
         />
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
+
+        <div className="relative mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-x-48 lg:gap-y-14">
+          {/* Centre : logo Diya + ondes concentriques (desktop) */}
+          <div className="pointer-events-none absolute inset-0 z-0 hidden place-items-center lg:grid">
+            <Hub />
+          </div>
+
           {dict.cards.map((card, i) => {
             const Icon = cardIcons[i] ?? Shield;
             return (
               <div
                 key={card.title}
-                className="flex items-start gap-5 rounded-3xl border border-line bg-card p-6 sm:p-7"
+                className="relative z-10 flex items-start gap-5 rounded-3xl border border-line bg-card p-6 shadow-[0_20px_50px_-40px_rgba(11,21,18,0.5)] sm:p-7"
               >
                 <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand">
                   <Icon className="h-7 w-7" />
@@ -35,5 +41,35 @@ export function Services({ dict }: { dict: Dict["services"] }) {
         </div>
       </Container>
     </section>
+  );
+}
+
+/* Logo central + anneaux fins (statiques + ondes qui se propagent). */
+function Hub() {
+  const ring = (size: number, opacity: number) => (
+    <span
+      className="absolute rounded-full border border-brand"
+      style={{ width: size, height: size, opacity }}
+    />
+  );
+  const wave = (delay: string) => (
+    <span
+      className="animate-ripple absolute rounded-full border border-brand"
+      style={{ width: 190, height: 190, animationDelay: delay, opacity: 0 }}
+    />
+  );
+  return (
+    <div className="relative grid place-items-center">
+      {ring(190, 0.22)}
+      {ring(300, 0.13)}
+      {ring(430, 0.08)}
+      {wave("0s")}
+      {wave("1.2s")}
+      {wave("2.4s")}
+      <span className="relative grid h-24 w-24 place-items-center rounded-full bg-brand shadow-[0_18px_40px_-14px_rgba(9,150,100,0.7)]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo-icon-white.svg" alt="Diya" className="h-11 w-auto" />
+      </span>
+    </div>
   );
 }
