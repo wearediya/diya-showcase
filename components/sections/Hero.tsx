@@ -1,6 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
-import { Download, ArrowRight, TrendingUp, Calendar } from "@/components/icons";
+import { ArrowRight, TrendingUp, Calendar } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function Hero({ dict }: { dict: Dict["hero"] }) {
@@ -16,14 +15,23 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
             {dict.subtitle}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="#download" size="lg" variant="dark" className="w-full sm:w-auto">
-              <Download className="h-5 w-5" />
-              {dict.primary}
-            </Button>
-            <Button href="#features" size="lg" variant="outline" className="w-full sm:w-auto">
+            {/* Principal : pilule sombre + badge rond flèche (style maquette) */}
+            <a
+              href="#download"
+              className="group inline-flex h-[58px] w-full items-center justify-between gap-3 rounded-full bg-ink pl-7 pr-2 font-semibold text-white transition-colors hover:bg-ink-2 sm:w-auto"
+            >
+              <span className="text-[15px]">{dict.primary}</span>
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-white text-ink transition-transform group-hover:translate-x-0.5">
+                <ArrowRight className="h-[18px] w-[18px]" />
+              </span>
+            </a>
+            {/* Secondaire : pilule menthe, texte foncé */}
+            <a
+              href="#features"
+              className="inline-flex h-[58px] w-full items-center justify-center rounded-full bg-mint-400 px-8 text-[15px] font-semibold text-ink transition-colors hover:bg-mint-strong sm:w-auto"
+            >
               {dict.secondary}
-              <ArrowRight className="h-[18px] w-[18px]" />
-            </Button>
+            </a>
           </div>
         </div>
 
