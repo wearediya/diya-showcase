@@ -14,7 +14,7 @@ function initials(name: string) {
 
 export function Testimonials({ dict }: { dict: Dict["testimonials"] }) {
   return (
-    <section id="testimonials" className="scroll-mt-20 bg-white py-20 sm:py-24">
+    <section id="testimonials" className="scroll-mt-20 bg-bg py-20 sm:py-24">
       <Container>
         <SectionHeading title={dict.title} subtitle={dict.subtitle} />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

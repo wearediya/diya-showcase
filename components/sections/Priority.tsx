@@ -5,7 +5,7 @@ import type { Dict } from "@/app/[lang]/dictionaries";
 export function Priority({ dict }: { dict: Dict["priority"] }) {
   const charts = [<Donut key="0" />, <Bars key="1" />, <Area key="2" />];
   return (
-    <section id="features" className="scroll-mt-20 bg-white py-20 sm:py-24">
+    <section id="features" className="scroll-mt-20 bg-bg py-20 sm:py-24">
       <Container>
         <SectionHeading
           eyebrow="Diya"
@@ -16,7 +16,7 @@ export function Priority({ dict }: { dict: Dict["priority"] }) {
           {dict.cards.map((card, i) => (
             <div
               key={card.title}
-              className="rounded-3xl border border-line bg-white p-6 transition-shadow hover:shadow-[0_20px_50px_-30px_rgba(11,21,18,0.4)]"
+              className="rounded-3xl border border-line bg-card p-6 transition-shadow hover:shadow-[0_20px_50px_-30px_rgba(11,21,18,0.4)]"
             >
               <div className="flex h-28 items-center justify-center rounded-2xl bg-soft/70">
                 {charts[i]}
@@ -42,7 +42,7 @@ function Donut() {
   const c = 2 * Math.PI * r;
   return (
     <svg width="96" height="96" viewBox="0 0 96 96">
-      <circle cx="48" cy="48" r={r} fill="none" stroke="#e6ebe8" strokeWidth="12" />
+      <circle cx="48" cy="48" r={r} fill="none" stroke="var(--color-line)" strokeWidth="12" />
       <circle
         cx="48"
         cy="48"

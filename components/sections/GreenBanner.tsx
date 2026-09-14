@@ -1,11 +1,11 @@
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
-import { Download, Check, Receipt, Wallet } from "@/components/icons";
+import { PillButton } from "@/components/ui/PillButton";
+import { Check, Receipt, Wallet } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
   return (
-    <section className="bg-gradient-to-b from-mint-400 to-mint py-20 sm:py-24">
+    <section className="theme-light bg-gradient-to-b from-mint-400 to-mint py-20 sm:py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-brand-ink sm:text-[40px] sm:leading-[1.1]">
@@ -15,10 +15,7 @@ export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
             {dict.subtitle}
           </p>
           <div className="mt-7 flex justify-center">
-            <Button href="#download" size="lg" variant="dark">
-              <Download className="h-5 w-5" />
-              {dict.cta}
-            </Button>
+            <PillButton href="#download">{dict.cta}</PillButton>
           </div>
         </div>
 

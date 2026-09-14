@@ -8,7 +8,9 @@
     "testimonials": "Avis",
     "faq": "FAQ",
     "download": "Télécharger l'app",
-    "menu": "Menu"
+    "menu": "Menu",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair"
   },
   "hero": {
     "title": "La gestion locative, simple et accessible partout.",

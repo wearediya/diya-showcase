@@ -4,9 +4,9 @@ import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function CtaBand({ dict }: { dict: Dict["cta"] }) {
   return (
-    <section id="download" className="scroll-mt-20 bg-white py-16 sm:py-20">
+    <section id="download" className="scroll-mt-20 bg-bg py-16 sm:py-20">
       <Container>
-        <div className="relative overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-mint-400 via-mint to-mint-200 p-8 sm:p-12">
+        <div className="theme-light relative overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-mint-400 via-mint to-mint-200 p-8 sm:p-12">
           <div className="dot-grid pointer-events-none absolute inset-0 opacity-[0.12]" />
           <div className="relative grid items-center gap-10 md:grid-cols-2">
             <div>

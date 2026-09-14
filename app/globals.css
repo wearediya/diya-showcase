@@ -43,6 +43,32 @@
   color-scheme: light;
 }
 
+/* ------------------------------------------------------------------ *
+ * Mode sombre : bascule via [data-theme="dark"] sur <html>.
+ * Seuls les tokens neutres changent ; la marque (vert/menthe) reste.
+ * ------------------------------------------------------------------ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0a1310;
+  --color-soft: #0f1a15;
+  --color-card: #14211b;
+  --color-ink: #eef2f0;
+  --color-ink-2: #d6ddda;
+  --color-muted: #93a49b;
+  --color-line: #223029;
+}
+
+/* Force la palette claire localement (sections menthe qui restent lumineuses). */
+.theme-light {
+  --color-bg: #ffffff;
+  --color-soft: #f4f7f5;
+  --color-card: #ffffff;
+  --color-ink: #0b1512;
+  --color-ink-2: #16241e;
+  --color-muted: #5b6b64;
+  --color-line: #e6ebe8;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -6,13 +6,13 @@ import type { Dict } from "@/app/[lang]/dictionaries";
 const cardIcons = [WifiOff, Shield, Cloud];
 const gradients = [
   "from-brand to-brand-700",
-  "from-ink to-ink-2",
+  "from-[#16241e] to-[#0a1310]",
   "from-mint-strong to-brand-600",
 ];
 
 export function Proof({ dict }: { dict: Dict["proof"] }) {
   return (
-    <section className="bg-white py-20 sm:py-24">
+    <section className="bg-bg py-20 sm:py-24">
       <Container>
         <SectionHeading title={dict.title} subtitle={dict.subtitle} />
         <div className="mt-14 grid gap-5 sm:grid-cols-3">

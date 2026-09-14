@@ -13,7 +13,7 @@ export function Faq({ dict }: { dict: Dict["faq"] }) {
             </h2>
             <p className="mt-4 text-[17px] leading-7 text-muted">{dict.subtitle}</p>
 
-            <div className="mt-7 rounded-3xl border border-line bg-white p-6">
+            <div className="mt-7 rounded-3xl border border-line bg-card p-6">
               <div className="flex items-center gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-2xl bg-mint/70 text-brand">
                   <WhatsApp className="h-5 w-5" />
@@ -36,7 +36,7 @@ export function Faq({ dict }: { dict: Dict["faq"] }) {
             {dict.items.map((item) => (
               <details
                 key={item.q}
-                className="group rounded-2xl border border-line bg-white px-5 open:shadow-sm"
+                className="group rounded-2xl border border-line bg-card px-5 open:shadow-sm"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[15.5px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
                   {item.q}

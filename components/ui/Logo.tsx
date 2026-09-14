@@ -9,7 +9,7 @@ export function Logo({
   decorative?: boolean;
   className?: string;
 }) {
-  const text = dark ? "#ffffff" : "#1d1d1b";
+  const text = dark ? "#ffffff" : "var(--color-ink)";
   const mark = dark ? "#ffffff" : "#099664";
   return (
     <svg

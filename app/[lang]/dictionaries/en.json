@@ -8,7 +8,9 @@
     "testimonials": "Reviews",
     "faq": "FAQ",
     "download": "Download the app",
-    "menu": "Menu"
+    "menu": "Menu",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
   },
   "hero": {
     "title": "Rental management, simple and available everywhere.",
