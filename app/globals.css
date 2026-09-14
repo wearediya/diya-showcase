@@ -28,6 +28,11 @@
   --color-muted: #5b6b64;
   --color-line: #e6ebe8;
 
+  /* Encadré « attention » (doc) */
+  --color-warn: #986a12;
+  --color-warn-bg: #fbf2dd;
+  --color-warn-line: #ecd8a8;
+
   /* Sombre (footer) */
   --color-night: #0a0f0d;
   --color-night-2: #121917;
@@ -56,6 +61,9 @@
   --color-ink-2: #d6ddda;
   --color-muted: #93a49b;
   --color-line: #223029;
+  --color-warn: #e3b866;
+  --color-warn-bg: #221b0d;
+  --color-warn-line: #3b2f16;
 }
 
 /* Force la palette claire localement (sections menthe qui restent lumineuses). */

@@ -151,6 +151,20 @@ export const Sofa = (p: IconProps) => (
   </svg>
 );
 
+export const Mail = (p: IconProps) => (
+  <svg {...base(p)}>
+    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+    <path d="m4 7 8 6 8-6" />
+  </svg>
+);
+
+export const MapPin = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" />
+    <circle cx="12" cy="10" r="2.5" />
+  </svg>
+);
+
 export const Sun = (p: IconProps) => (
   <svg {...base(p)}>
     <circle cx="12" cy="12" r="4" />
