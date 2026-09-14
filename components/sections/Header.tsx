@@ -24,8 +24,6 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
 
   const links = [
     { href: `/${lang}#features`, label: nav.features },
-    { href: `/${lang}#testimonials`, label: nav.testimonials },
-    { href: `/${lang}#faq`, label: nav.faq },
     { href: `/${lang}/documentation`, label: nav.documentation },
     { href: `/${lang}/contact`, label: nav.contact },
   ];
