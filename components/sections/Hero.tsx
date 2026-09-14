@@ -41,7 +41,7 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
             />
 
             {/* Carte flottante haut-gauche : statistique (taux d'occupation) */}
-            <div className="absolute left-[-12%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-card p-4 shadow-xl sm:block">
+            <div className="absolute left-[-30%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-card p-4 shadow-xl sm:block">
               <div className="flex items-center justify-between">
                 <span className="text-[12.5px] font-medium text-muted">{dict.statsLabel}</span>
                 <span className="grid h-7 w-7 place-items-center rounded-lg bg-mint/60 text-brand">
