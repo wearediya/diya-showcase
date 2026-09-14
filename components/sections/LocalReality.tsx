@@ -1,8 +1,8 @@
 import { Container } from "@/components/ui/Container";
-import { Wallet, WhatsApp, Phone, Building } from "@/components/icons";
+import { Wallet, Receipt, Phone, Building } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
-const cardIcons = [Wallet, WhatsApp, Phone, Building];
+const cardIcons = [Wallet, Receipt, Phone, Building];
 
 export function LocalReality({ dict }: { dict: Dict["local"] }) {
   return (
