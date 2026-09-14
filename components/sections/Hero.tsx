@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
-import { ArrowRight, Calendar, Chart } from "@/components/icons";
+import { PillButton } from "@/components/ui/PillButton";
+import { Calendar, Chart } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function Hero({ dict }: { dict: Dict["hero"] }) {
@@ -16,15 +17,9 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             {/* Principal : pilule sombre + badge rond flèche (style maquette) */}
-            <a
-              href="#download"
-              className="group inline-flex h-[58px] w-full items-center justify-between gap-3 rounded-full bg-ink pl-7 pr-2 font-semibold text-white transition-colors hover:bg-ink-2 sm:w-auto"
-            >
-              <span className="text-[15px]">{dict.primary}</span>
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-white text-ink transition-transform group-hover:translate-x-0.5">
-                <ArrowRight className="h-[18px] w-[18px]" />
-              </span>
-            </a>
+            <PillButton href="#download" className="w-full sm:w-auto">
+              {dict.primary}
+            </PillButton>
             {/* Secondaire : pilule menthe, texte foncé */}
             <a
               href="#features"

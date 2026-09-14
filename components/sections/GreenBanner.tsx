@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
-import { Download, Check, Receipt, Wallet } from "@/components/icons";
+import { PillButton } from "@/components/ui/PillButton";
+import { Check, Receipt, Wallet } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
@@ -15,10 +15,7 @@ export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
             {dict.subtitle}
           </p>
           <div className="mt-7 flex justify-center">
-            <Button href="#download" size="lg" variant="dark">
-              <Download className="h-5 w-5" />
-              {dict.cta}
-            </Button>
+            <PillButton href="#download">{dict.cta}</PillButton>
           </div>
         </div>
 
