@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
@@ -22,9 +23,10 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
   }, []);
 
   const links = [
-    { href: "#features", label: nav.features },
-    { href: "#testimonials", label: nav.testimonials },
-    { href: "#faq", label: nav.faq },
+    { href: `/${lang}#features`, label: nav.features },
+    { href: `/${lang}#testimonials`, label: nav.testimonials },
+    { href: `/${lang}#faq`, label: nav.faq },
+    { href: `/${lang}/documentation`, label: nav.documentation },
   ];
 
   return (
@@ -92,13 +94,17 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
 
 function LangSwitch({ lang }: { lang: Locale }) {
   const other: Locale = lang === "fr" ? "en" : "fr";
+  const pathname = usePathname();
+  const target = pathname?.startsWith(`/${lang}`)
+    ? `/${other}${pathname.slice(lang.length + 1)}`
+    : `/${other}`;
   return (
     <div className="flex items-center rounded-full border border-line bg-card p-0.5 text-xs font-semibold">
       <span className="rounded-full bg-brand px-2.5 py-1 text-white uppercase">
         {lang}
       </span>
       <Link
-        href={`/${other}`}
+        href={target}
         className="rounded-full px-2.5 py-1 uppercase text-muted transition-colors hover:text-ink"
       >
         {other}
