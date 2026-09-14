@@ -136,6 +136,21 @@ export const Bath = (p: IconProps) => (
   </svg>
 );
 
+export const Wifi = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0" />
+    <path d="M12 19h.01" />
+  </svg>
+);
+
+export const Sofa = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" />
+    <path d="M2 14a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v4H2v-4Z" />
+    <path d="M6 20v1M18 20v1" />
+  </svg>
+);
+
 export const Sun = (p: IconProps) => (
   <svg {...base(p)}>
     <circle cx="12" cy="12" r="4" />

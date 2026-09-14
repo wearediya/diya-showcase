@@ -117,8 +117,15 @@
     "fieldRent": "Loyer conseillé",
     "typeExample": "Appartement 2 pièces",
     "saveLabel": "Enregistrer",
-    "occupied": "Occupé",
-    "sinceLabel": "depuis"
+    "vacant": "Vacant",
+    "yes": "Oui",
+    "no": "Non",
+    "specFloor": "Étage",
+    "specRooms": "Pièces",
+    "specBeds": "Chambres",
+    "specBaths": "Salles de bain",
+    "specFurnished": "Meublé",
+    "specWifi": "Connexion internet"
   },
   "services": {
     "title": "Un accompagnement à la hauteur",

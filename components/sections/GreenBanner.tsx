@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { PillButton } from "@/components/ui/PillButton";
-import { Building, Stairs, DoorRooms, Bed, Bath } from "@/components/icons";
+import { Building, Stairs, DoorRooms, Bed, Bath, Sofa, Wifi } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
@@ -110,43 +110,37 @@ function Field({
   );
 }
 
-/* Fiche d'un logement (page détail réelle : type + statut, occupant, specs). */
+/* Fiche d'un logement (page détail réelle : en-tête + grille de spec-cards). */
 function UnitDetailCard({ dict, className }: { dict: Dict["banner"]; className?: string }) {
+  const specs = [
+    { icon: <Stairs className="h-4 w-4" />, value: "0", label: dict.specFloor },
+    { icon: <DoorRooms className="h-4 w-4" />, value: "2", label: dict.specRooms },
+    { icon: <Bed className="h-4 w-4" />, value: "1", label: dict.specBeds },
+    { icon: <Bath className="h-4 w-4" />, value: "1", label: dict.specBaths },
+    { icon: <Sofa className="h-4 w-4" />, value: dict.no, label: dict.specFurnished },
+    { icon: <Wifi className="h-4 w-4" />, value: dict.yes, label: dict.specWifi },
+  ];
   return (
-    <div className={`w-[232px] rounded-2xl border border-line bg-white p-4 shadow-xl ${className ?? ""}`}>
-      <div className="flex items-center justify-between gap-2">
-        <span className="truncate text-[12.5px] font-bold text-ink">{dict.typeExample}</span>
+    <div className={`w-[250px] rounded-2xl border border-line bg-white p-3.5 shadow-xl ${className ?? ""}`}>
+      <div className="mb-2.5 flex items-center justify-between gap-2">
+        <span className="truncate text-[13px] font-extrabold text-ink">Boutique B3</span>
         <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-mint/70 px-2 py-0.5 text-[10px] font-bold text-brand-ink">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-          {dict.occupied}
+          {dict.vacant}
         </span>
       </div>
-
-      <div className="mt-3 flex items-center gap-2.5">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-mint/70 text-[11px] font-bold text-brand-ink">
-          KA
-        </span>
-        <div className="min-w-0">
-          <div className="text-[12.5px] font-semibold text-ink">Kodjo A.</div>
-          <div className="text-[10.5px] text-muted">150 000 FCFA · {dict.sinceLabel} 2024</div>
-        </div>
-      </div>
-
-      <div className="mt-3 flex items-center justify-between border-t border-line pt-3">
-        <Spec icon={<Stairs className="h-4 w-4" />} n="1" />
-        <Spec icon={<DoorRooms className="h-4 w-4" />} n="3" />
-        <Spec icon={<Bed className="h-4 w-4" />} n="2" />
-        <Spec icon={<Bath className="h-4 w-4" />} n="1" />
+      <div className="grid grid-cols-3 gap-1.5">
+        {specs.map((s) => (
+          <div
+            key={s.label}
+            className="flex flex-col items-center rounded-xl bg-soft/80 px-1 py-2 text-center"
+          >
+            <span className="text-brand">{s.icon}</span>
+            <span className="mt-1 text-[13px] font-extrabold leading-none text-ink">{s.value}</span>
+            <span className="mt-0.5 text-[8px] leading-tight text-muted">{s.label}</span>
+          </div>
+        ))}
       </div>
     </div>
-  );
-}
-
-function Spec({ icon, n }: { icon: React.ReactNode; n: string }) {
-  return (
-    <span className="inline-flex items-center gap-1 text-[11.5px] font-semibold text-ink">
-      <span className="text-brand">{icon}</span>
-      {n}
-    </span>
   );
 }
