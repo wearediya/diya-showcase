@@ -7,7 +7,7 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
   return (
     <section className="relative overflow-hidden">
       <div className="glow-mint pointer-events-none absolute inset-x-0 top-0 h-[560px]" />
-      <Container className="relative pt-14 pb-4 sm:pt-20">
+      <Container className="relative pt-14 pb-0 sm:pt-20">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-[56px]">
             {dict.title}
