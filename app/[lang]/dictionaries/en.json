@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "title": "Diya — Simple rental management, even offline",
+    "description": "Diya is the mobile rental-management app for landlords and property managers in West Africa: units, tenants, rent, expenses, bookings and receipts — 100% offline, in CFA francs."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "testimonials": "Reviews",
+    "faq": "FAQ",
+    "download": "Download the app",
+    "menu": "Menu"
+  },
+  "hero": {
+    "badge": "100% offline · in CFA",
+    "title": "Rental management, simple and available everywhere.",
+    "subtitle": "Manage your units, tenants, rent and expenses from your phone — even with no connection. Receipts, bookings and cash flow included.",
+    "primary": "Download the app",
+    "secondary": "Explore the features",
+    "dashboardTitle": "Dashboard",
+    "revenueLabel": "This month's revenue",
+    "revenueValue": "1,250,000 CFA",
+    "revenueTrend": "+12% vs last month",
+    "receiptsLabel": "Rent collected",
+    "receiptsValue": "37 receipts",
+    "bookingLabel": "Booking",
+    "bookingValue": "Room 04 · 3 nights"
+  },
+  "trust": {
+    "label": "Built for every kind of property",
+    "items": ["Apartments", "Houses", "Hotels", "Furnished", "Shops", "Offices"]
+  },
+  "priority": {
+    "title": "A head start for landlords",
+    "subtitle": "Diya brings together everything you need to run your rental portfolio — no spreadsheets, no paperwork.",
+    "cards": [
+      {
+        "title": "Rent tracking",
+        "desc": "Payments, arrears and receipts at a glance.",
+        "stat": "98%",
+        "statLabel": "rent up to date"
+      },
+      {
+        "title": "Cash flow",
+        "desc": "Money in and out, consolidated per property.",
+        "stat": "1.25M",
+        "statLabel": "CFA this month"
+      },
+      {
+        "title": "Occupancy rate",
+        "desc": "Occupied, vacant and reserved units in real time.",
+        "stat": "37",
+        "statLabel": "units tracked"
+      }
+    ]
+  },
+  "split": {
+    "title": "All your rental management in one place",
+    "subtitle": "From creating a lease to sharing a receipt, Diya tracks every step — offline, on your phone.",
+    "features": [
+      {
+        "title": "Leases & receipts",
+        "desc": "Create a lease, collect the rent and share the receipt as a PDF or image."
+      },
+      {
+        "title": "Short-stay bookings",
+        "desc": "Hotels and furnished units: book by the hour, day or month, with a receipt."
+      },
+      {
+        "title": "Expenses & cash flow",
+        "desc": "Track every expense and keep an always-accurate cash box, per property."
+      }
+    ],
+    "chatTitle": "Rent receipt",
+    "chatUnit": "Apartment B2 · August 2026",
+    "chatAmount": "150,000 CFA",
+    "chatStatus": "Paid",
+    "chatButton": "Share the receipt"
+  },
+  "proof": {
+    "title": "Built for the real world",
+    "subtitle": "A fast, reliable app made for West Africa.",
+    "cards": [
+      { "caption": "Works with no Internet, anywhere in Togo" },
+      { "caption": "Your data stays encrypted on your phone" },
+      { "caption": "Automatic backup to your Google Drive" }
+    ]
+  },
+  "banner": {
+    "title": "All of Diya, in your pocket",
+    "subtitle": "A fast, mobile-first app that keeps working even when the network doesn't.",
+    "cta": "Download the app",
+    "tag1": "Booking confirmed",
+    "tag2": "Receipt ready to share",
+    "tag3": "Cash flow up to date"
+  },
+  "services": {
+    "title": "Support that measures up",
+    "subtitle": "Diya isn't just an app: it's a team and tools that back you up every day.",
+    "cards": [
+      {
+        "title": "WhatsApp support",
+        "desc": "A question? The Diya team replies to you directly on WhatsApp."
+      },
+      {
+        "title": "Google Drive backup",
+        "desc": "No password needed: your data is backed up automatically."
+      },
+      {
+        "title": "Security & encryption",
+        "desc": "Encrypted database and biometric lock on the app."
+      },
+      {
+        "title": "Stats & insights",
+        "desc": "Revenue, occupancy and expenses analysed for better decisions."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Choose your plan",
+    "subtitle": "Start free. Move up a plan as you grow.",
+    "perMonth": "/month",
+    "popular": "Most popular",
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "Free",
+        "note": "To get going",
+        "features": ["Up to 5 units", "Leases & receipts", "Rent tracking", "Full offline mode"],
+        "cta": "Get started",
+        "featured": false
+      },
+      {
+        "name": "Landlord Pro",
+        "price": "5,000 CFA",
+        "note": "Landlords' favourite",
+        "features": ["Unlimited units", "Short-stay bookings", "Custom PDF receipts", "Google Drive backup", "Priority support"],
+        "cta": "Choose Pro",
+        "featured": true
+      },
+      {
+        "name": "Agency",
+        "price": "Custom",
+        "note": "For property managers",
+        "features": ["Multiple accounts", "Roles & permissions", "Advanced reports", "Dedicated onboarding"],
+        "cta": "Contact us",
+        "featured": false
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "They manage better with Diya",
+    "subtitle": "Landlords and managers across the region trust Diya.",
+    "items": [
+      {
+        "name": "Kodjo A.",
+        "role": "Landlord · Lomé",
+        "quote": "I track my rent and send receipts without Internet. A real time-saver every day."
+      },
+      {
+        "name": "Aïcha D.",
+        "role": "Property manager",
+        "quote": "Short-stay bookings completely simplified how I run my furnished units."
+      },
+      {
+        "name": "Komlan M.",
+        "role": "Landlord · Kara",
+        "quote": "No more notebooks: everything is clear, even the cash flow of each building."
+      },
+      {
+        "name": "Fatou S.",
+        "role": "Agency · Lomé",
+        "quote": "The automatic Google Drive backup gives me huge peace of mind."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Your questions, answered",
+    "subtitle": "Everything you need to know before getting started with Diya.",
+    "contactLabel": "Still have a question?",
+    "contactText": "Our team replies on WhatsApp or by email.",
+    "contactCta": "Contact us",
+    "items": [
+      {
+        "q": "Does Diya work without an Internet connection?",
+        "a": "Yes. Diya is 100% offline: everything is saved on your phone and stays available at any time, even with no network."
+      },
+      {
+        "q": "Is my data safe?",
+        "a": "Your database is encrypted and protected by a biometric lock. Your data never leaves your device without your consent."
+      },
+      {
+        "q": "Can I manage several properties and units?",
+        "a": "Yes, as many as you like: apartments, houses, hotels, furnished units, shops and offices."
+      },
+      {
+        "q": "Can I create short-stay bookings?",
+        "a": "Yes, for hotels and furnished units: by the hour, day or month, with automatic totals and a shareable receipt."
+      },
+      {
+        "q": "How do I back up my data?",
+        "a": "Diya backs up automatically to your Google Drive, with no password. You can restore your data on a new device."
+      },
+      {
+        "q": "Which currency can I bill in?",
+        "a": "In CFA francs by default, tailored to West Africa, with clear receipts that stay faithful when printed."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Simple rental management, even offline.",
+    "subtitle": "Join the landlords who manage their portfolio with peace of mind using Diya.",
+    "primary": "Download the app",
+    "secondary": "See pricing",
+    "statLabel": "Revenue tracked this month",
+    "statValue": "1,231,560 CFA"
+  },
+  "footer": {
+    "tagline": "The rental-management app built for West Africa. Simple, offline, in CFA francs.",
+    "columns": [
+      {
+        "title": "Product",
+        "links": ["Features", "Bookings", "Pricing", "Download"]
+      },
+      {
+        "title": "Resources",
+        "links": ["FAQ", "Getting started", "Support", "Privacy"]
+      },
+      {
+        "title": "Diya",
+        "links": ["About", "Contact", "Blog", "Open source"]
+      }
+    ],
+    "copyright": "© 2026 Diya. All rights reserved.",
+    "madeBy": "A KARFI product."
+  }
+}
