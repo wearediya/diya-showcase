@@ -11,22 +11,30 @@ const cardImages = [
   "/biens.jpg", // Tous vos biens
 ];
 
+// Tailles variées (mosaïque bento) : grande, large, deux petites.
+const cardSpan = [
+  "col-span-2 lg:col-span-2 lg:row-span-2", // 0 — grande
+  "col-span-1 lg:col-span-2 lg:row-span-1", // 1 — large
+  "col-span-1 lg:col-span-1 lg:row-span-1", // 2 — petite
+  "col-span-2 lg:col-span-1 lg:row-span-1", // 3 — petite (large sur mobile)
+];
+
 export function LocalReality({ dict }: { dict: Dict["local"] }) {
   return (
     <section className="bg-soft py-16 sm:py-20">
       <Container>
-        {/* Les 4 cartes forment un seul grand rectangle d'images (sans espace). */}
-        <div className="grid grid-cols-2 overflow-hidden rounded-3xl shadow-[0_30px_70px_-40px_rgba(11,21,18,0.5)] lg:grid-cols-4">
+        {/* Mosaïque de tailles variées, jointive, formant un seul grand rectangle. */}
+        <div className="grid grid-cols-2 auto-rows-[172px] overflow-hidden rounded-3xl shadow-[0_30px_70px_-40px_rgba(11,21,18,0.55)] sm:auto-rows-[200px] lg:grid-cols-4 lg:auto-rows-[212px]">
           {dict.cards.map((card, i) => (
             <article
               key={card.title}
-              className="group relative h-[260px] overflow-hidden sm:h-[300px] lg:h-[380px]"
+              className={`group relative overflow-hidden ${cardSpan[i] ?? ""}`}
             >
               <Image
                 src={cardImages[i] ?? "/biens.jpg"}
                 alt={card.title}
                 fill
-                sizes="(min-width: 1024px) 25vw, 50vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
               />
               {/* Dégradé pour la lisibilité du titre (renforcé au survol). */}
