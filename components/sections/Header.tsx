@@ -27,6 +27,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
     { href: `/${lang}#testimonials`, label: nav.testimonials },
     { href: `/${lang}#faq`, label: nav.faq },
     { href: `/${lang}/documentation`, label: nav.documentation },
+    { href: `/${lang}/contact`, label: nav.contact },
   ];
 
   return (
