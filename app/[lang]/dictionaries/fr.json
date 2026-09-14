@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "Diya — La gestion locative simple, même hors‑ligne",
+    "description": "Diya est l'application mobile de gestion locative pour propriétaires et gestionnaires en Afrique de l'Ouest : biens, locataires, loyers, dépenses, réservations et reçus — 100 % hors‑ligne, en FCFA."
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "testimonials": "Avis",
+    "faq": "FAQ",
+    "download": "Télécharger l'app",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "La gestion locative, simple et accessible partout.",
+    "subtitle": "Gérez vos biens, locataires, loyers et dépenses depuis votre téléphone — même sans connexion. Quittances, réservations et trésorerie inclus.",
+    "primary": "Télécharger l'app",
+    "secondary": "Découvrir les fonctionnalités",
+    "dashboardTitle": "Tableau de bord",
+    "revenueLabel": "Revenu du mois",
+    "revenueValue": "1 250 000 FCFA",
+    "revenueTrend": "+12 % vs mois dernier",
+    "receiptsLabel": "Loyers encaissés",
+    "receiptsValue": "37 quittances",
+    "bookingLabel": "Réservation",
+    "bookingValue": "Chambre 04 · 3 nuits",
+    "statsLabel": "Taux d'occupation",
+    "statsValue": "92%",
+    "statsSub": "37 logements occupés"
+  },
+  "local": {
+    "cards": [
+      {
+        "title": "Toutes les devises",
+        "desc": "Franc CFA, BEAC, Cedi, Naira, Euro… Diya s'adapte à la devise de votre pays."
+      },
+      {
+        "title": "Reçus partageables",
+        "desc": "Générez la quittance et partagez-la en PDF ou en image — WhatsApp, e-mail ou impression."
+      },
+      {
+        "title": "Espèces & Mobile Money",
+        "desc": "Suivez chaque paiement, en liquide comme en mobile money, sans complication."
+      },
+      {
+        "title": "Tous vos biens",
+        "desc": "Villas, chambres, magasins, meublés ou bureaux : Diya s'adapte à votre parc."
+      }
+    ]
+  },
+  "priority": {
+    "title": "Une longueur d'avance pour les bailleurs",
+    "subtitle": "Diya réunit tout ce qu'il faut pour piloter votre patrimoine locatif — sans tableur ni paperasse.",
+    "cards": [
+      {
+        "title": "Suivi des loyers",
+        "desc": "Encaissements, retards et quittances en un coup d'œil.",
+        "stat": "98 %",
+        "statLabel": "loyers à jour"
+      },
+      {
+        "title": "Trésorerie",
+        "desc": "Entrées et sorties de caisse consolidées par bien.",
+        "stat": "1,25 M",
+        "statLabel": "FCFA ce mois"
+      },
+      {
+        "title": "Taux d'occupation",
+        "desc": "Logements occupés, vacants et réservés en temps réel.",
+        "stat": "37",
+        "statLabel": "logements suivis"
+      }
+    ]
+  },
+  "split": {
+    "title": "Toute votre gestion locative au même endroit",
+    "subtitle": "De la création du bail à la quittance partagée, Diya suit chaque étape — hors‑ligne, sur votre téléphone.",
+    "features": [
+      {
+        "title": "Baux & quittances",
+        "desc": "Créez un bail, encaissez le loyer et partagez la quittance en PDF ou en image."
+      },
+      {
+        "title": "Réservations court séjour",
+        "desc": "Hôtels et meublés : réservez à l'heure, au jour ou au mois, avec reçu."
+      },
+      {
+        "title": "Dépenses & trésorerie",
+        "desc": "Suivez chaque dépense et gardez une caisse toujours juste, par bien."
+      }
+    ],
+    "chatTitle": "Quittance de loyer",
+    "chatUnit": "Appartement B2 · Août 2026",
+    "chatAmount": "150 000 FCFA",
+    "chatStatus": "Payé",
+    "chatButton": "Partager la quittance"
+  },
+  "proof": {
+    "title": "Fiable et sécurisé, où que vous soyez",
+    "subtitle": "Une app rapide et fiable, faite pour l'Afrique de l'Ouest.",
+    "cards": [
+      { "caption": "Fonctionne sans Internet, partout au Togo" },
+      { "caption": "Vos données restent chiffrées sur votre téléphone" },
+      { "caption": "Sauvegarde automatique sur votre Google Drive" }
+    ]
+  },
+  "banner": {
+    "title": "Tout Diya, dans votre poche",
+    "subtitle": "Une application rapide, pensée pour le mobile, qui marche même quand le réseau ne suit pas.",
+    "cta": "Télécharger l'app",
+    "tag1": "Réservation confirmée",
+    "tag2": "Reçu prêt à partager",
+    "tag3": "Trésorerie à jour"
+  },
+  "services": {
+    "title": "Un accompagnement à la hauteur",
+    "subtitle": "Diya, ce n'est pas qu'une app : c'est une équipe et des outils qui vous soutiennent au quotidien.",
+    "cards": [
+      {
+        "title": "Support par WhatsApp",
+        "desc": "Une question ? L'équipe Diya vous répond directement sur WhatsApp."
+      },
+      {
+        "title": "Sauvegarde Google Drive",
+        "desc": "Sans mot de passe : vos données sont sauvegardées automatiquement."
+      },
+      {
+        "title": "Sécurité & chiffrement",
+        "desc": "Base de données chiffrée et verrouillage biométrique de l'app."
+      },
+      {
+        "title": "Statistiques & insights",
+        "desc": "Revenu, occupation et dépenses analysés pour de meilleures décisions."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ils gèrent mieux avec Diya",
+    "subtitle": "Des propriétaires et gestionnaires de toute la région nous font confiance.",
+    "items": [
+      {
+        "name": "Kodjo A.",
+        "role": "Propriétaire · Lomé",
+        "quote": "Je suis mes loyers et j'envoie mes quittances sans Internet. Un vrai gain de temps au quotidien."
+      },
+      {
+        "name": "Aïcha D.",
+        "role": "Gestionnaire immobilier",
+        "quote": "Les réservations court séjour ont totalement simplifié la gestion de mes meublés."
+      },
+      {
+        "name": "Komlan M.",
+        "role": "Bailleur · Kara",
+        "quote": "Fini les cahiers : tout est clair, même la trésorerie de chaque immeuble."
+      },
+      {
+        "name": "Fatou S.",
+        "role": "Agence · Lomé",
+        "quote": "La sauvegarde automatique sur Google Drive me rassure énormément."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Vos questions, nos réponses",
+    "subtitle": "Tout ce qu'il faut savoir avant de vous lancer avec Diya.",
+    "contactLabel": "Encore une question ?",
+    "contactText": "Notre équipe vous répond sur WhatsApp ou par e‑mail.",
+    "contactCta": "Nous contacter",
+    "items": [
+      {
+        "q": "Diya fonctionne‑t‑il sans connexion Internet ?",
+        "a": "Oui. Diya est 100 % hors‑ligne : tout est enregistré sur votre téléphone et reste disponible à tout moment, même sans réseau."
+      },
+      {
+        "q": "Mes données sont‑elles en sécurité ?",
+        "a": "Votre base de données est chiffrée et protégée par un verrouillage biométrique. Vos données ne quittent jamais votre appareil sans votre accord."
+      },
+      {
+        "q": "Puis‑je gérer plusieurs biens et logements ?",
+        "a": "Oui, autant que vous le souhaitez : appartements, maisons, hôtels, meublés, commerces et bureaux."
+      },
+      {
+        "q": "Puis‑je faire des réservations court séjour ?",
+        "a": "Oui, pour les hôtels et meublés : à l'heure, au jour ou au mois, avec calcul automatique du montant et reçu partageable."
+      },
+      {
+        "q": "Comment sauvegarder mes données ?",
+        "a": "Diya sauvegarde automatiquement sur votre Google Drive, sans mot de passe. Vous pouvez restaurer vos données sur un nouvel appareil."
+      },
+      {
+        "q": "Dans quelle devise puis‑je facturer ?",
+        "a": "En FCFA par défaut, adaptée à l'Afrique de l'Ouest, avec des reçus lisibles et fidèles à l'impression."
+      }
+    ]
+  },
+  "cta": {
+    "title": "La gestion locative simple, même hors‑ligne.",
+    "subtitle": "Rejoignez les bailleurs qui gèrent leur patrimoine sereinement avec Diya.",
+    "primary": "Télécharger l'app",
+    "secondary": "Voir les tarifs",
+    "statLabel": "Revenu suivi ce mois",
+    "statValue": "1 231 560 FCFA"
+  },
+  "footer": {
+    "tagline": "L'application de gestion locative pensée pour l'Afrique de l'Ouest. Simple, hors‑ligne, en FCFA.",
+    "columns": [
+      {
+        "title": "Produit",
+        "links": ["Fonctionnalités", "Réservations", "Télécharger"]
+      },
+      {
+        "title": "Ressources",
+        "links": ["FAQ", "Guide de démarrage", "Support", "Confidentialité"]
+      },
+      {
+        "title": "Diya",
+        "links": ["À propos", "Contact", "Blog", "Open source"]
+      }
+    ],
+    "copyright": "© 2026 Diya. Tous droits réservés.",
+    "madeBy": "Un produit KARFI."
+  }
+}

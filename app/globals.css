@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ *
+ * Diya — design tokens (site vitrine)
+ * Palette de marque : vert Diya #099664 + menthe claire (façon maquette)
+ * ------------------------------------------------------------------ */
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* Marque */
+  --color-brand: #099664;
+  --color-brand-600: #0a875b;
+  --color-brand-700: #076f4b;
+  --color-brand-ink: #053725;
+
+  /* Menthe (sections vertes / accents doux) */
+  --color-mint: #c9f4de;
+  --color-mint-200: #a9edcb;
+  --color-mint-400: #7fe3ac;
+  --color-mint-strong: #6fd79f;
+
+  /* Neutres */
+  --color-bg: #ffffff;
+  --color-soft: #f4f7f5;
+  --color-card: #ffffff;
+  --color-ink: #0b1512;
+  --color-ink-2: #16241e;
+  --color-muted: #5b6b64;
+  --color-line: #e6ebe8;
+
+  /* Sombre (footer) */
+  --color-night: #0a0f0d;
+  --color-night-2: #121917;
+  --color-night-line: #20302a;
+  --color-night-muted: #9bb0a6;
+
+  /* Rayons */
+  --radius-xl2: 1.25rem;
+  --radius-xl3: 1.75rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+/* Conteneur de page centré */
+.container-diya {
+  width: 100%;
+  max-width: 76rem; /* ~1216px */
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Léger halo radial vert (hero / bandeaux) */
+.glow-mint {
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(127, 227, 172, 0.35) 0%, rgba(127, 227, 172, 0) 70%);
+}
+
+/* Grille de points discrète (fonds de section) */
+.dot-grid {
+  background-image: radial-gradient(rgba(11, 21, 18, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Animation d'apparition douce */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty { animation: floaty 6s ease-in-out infinite; }
+.animate-floaty-slow { animation: floaty 9s ease-in-out infinite; }
