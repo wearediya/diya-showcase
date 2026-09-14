@@ -5,7 +5,6 @@
   },
   "nav": {
     "features": "Fonctionnalités",
-    "pricing": "Tarifs",
     "testimonials": "Avis",
     "faq": "FAQ",
     "download": "Télécharger l'app",
@@ -133,38 +132,6 @@
       }
     ]
   },
-  "pricing": {
-    "title": "Choisissez votre formule",
-    "subtitle": "Commencez gratuitement. Passez à une offre supérieure quand vous grandissez.",
-    "perMonth": "/mois",
-    "popular": "Le plus populaire",
-    "tiers": [
-      {
-        "name": "Découverte",
-        "price": "Gratuit",
-        "note": "Pour démarrer",
-        "features": ["Jusqu'à 5 logements", "Baux & quittances", "Suivi des loyers", "Mode hors‑ligne complet"],
-        "cta": "Commencer",
-        "featured": false
-      },
-      {
-        "name": "Bailleur Pro",
-        "price": "5 000 FCFA",
-        "note": "Le choix des propriétaires",
-        "features": ["Logements illimités", "Réservations court séjour", "Reçus PDF personnalisés", "Sauvegarde Google Drive", "Support prioritaire"],
-        "cta": "Choisir Pro",
-        "featured": true
-      },
-      {
-        "name": "Agence",
-        "price": "Sur devis",
-        "note": "Pour les gestionnaires",
-        "features": ["Multi‑comptes", "Rôles & permissions", "Rapports avancés", "Accompagnement dédié"],
-        "cta": "Nous contacter",
-        "featured": false
-      }
-    ]
-  },
   "testimonials": {
     "title": "Ils gèrent mieux avec Diya",
     "subtitle": "Des propriétaires et gestionnaires de toute la région nous font confiance.",
@@ -237,7 +204,7 @@
     "columns": [
       {
         "title": "Produit",
-        "links": ["Fonctionnalités", "Réservations", "Tarifs", "Télécharger"]
+        "links": ["Fonctionnalités", "Réservations", "Télécharger"]
       },
       {
         "title": "Ressources",

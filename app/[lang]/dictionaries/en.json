@@ -5,7 +5,6 @@
   },
   "nav": {
     "features": "Features",
-    "pricing": "Pricing",
     "testimonials": "Reviews",
     "faq": "FAQ",
     "download": "Download the app",
@@ -133,38 +132,6 @@
       }
     ]
   },
-  "pricing": {
-    "title": "Choose your plan",
-    "subtitle": "Start free. Move up a plan as you grow.",
-    "perMonth": "/month",
-    "popular": "Most popular",
-    "tiers": [
-      {
-        "name": "Starter",
-        "price": "Free",
-        "note": "To get going",
-        "features": ["Up to 5 units", "Leases & receipts", "Rent tracking", "Full offline mode"],
-        "cta": "Get started",
-        "featured": false
-      },
-      {
-        "name": "Landlord Pro",
-        "price": "5,000 CFA",
-        "note": "Landlords' favourite",
-        "features": ["Unlimited units", "Short-stay bookings", "Custom PDF receipts", "Google Drive backup", "Priority support"],
-        "cta": "Choose Pro",
-        "featured": true
-      },
-      {
-        "name": "Agency",
-        "price": "Custom",
-        "note": "For property managers",
-        "features": ["Multiple accounts", "Roles & permissions", "Advanced reports", "Dedicated onboarding"],
-        "cta": "Contact us",
-        "featured": false
-      }
-    ]
-  },
   "testimonials": {
     "title": "They manage better with Diya",
     "subtitle": "Landlords and managers across the region trust Diya.",
@@ -237,7 +204,7 @@
     "columns": [
       {
         "title": "Product",
-        "links": ["Features", "Bookings", "Pricing", "Download"]
+        "links": ["Features", "Bookings", "Download"]
       },
       {
         "title": "Resources",

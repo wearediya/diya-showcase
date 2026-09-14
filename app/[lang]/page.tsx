@@ -9,7 +9,6 @@ import { Split } from "@/components/sections/Split";
 import { Proof } from "@/components/sections/Proof";
 import { GreenBanner } from "@/components/sections/GreenBanner";
 import { Services } from "@/components/sections/Services";
-import { Pricing } from "@/components/sections/Pricing";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -31,7 +30,6 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <Proof dict={dict.proof} />
         <GreenBanner dict={dict.banner} />
         <Services dict={dict.services} />
-        <Pricing dict={dict.pricing} />
         <Testimonials dict={dict.testimonials} />
         <Faq dict={dict.faq} />
         <CtaBand dict={dict.cta} />
