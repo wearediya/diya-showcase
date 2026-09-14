@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { ArrowRight, Calendar } from "@/components/icons";
+import { ArrowRight, Calendar, Chart } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function Hero({ dict }: { dict: Dict["hero"] }) {
@@ -45,13 +45,24 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
               className="pointer-events-none relative z-10 mx-auto h-auto w-full select-none"
             />
 
-            {/* Carte flottante haut-gauche : revenu du mois (design fourni) */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/homecard.svg"
-              alt={dict.revenueLabel}
-              className="absolute left-[-17%] top-[1%] z-20 hidden w-[228px] select-none drop-shadow-[0_18px_35px_rgba(11,21,18,0.35)] sm:block"
-            />
+            {/* Carte flottante haut-gauche : statistique (taux d'occupation) */}
+            <div className="absolute left-[-12%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-white p-4 shadow-xl sm:block">
+              <div className="flex items-center justify-between">
+                <span className="text-[12.5px] font-medium text-muted">{dict.statsLabel}</span>
+                <span className="grid h-7 w-7 place-items-center rounded-lg bg-mint/60 text-brand">
+                  <Chart className="h-4 w-4" />
+                </span>
+              </div>
+              <div className="mt-3 flex items-center gap-3.5">
+                <MiniDonut pct={0.92} />
+                <div>
+                  <div className="text-2xl font-extrabold tracking-tight text-ink">
+                    {dict.statsValue}
+                  </div>
+                  <div className="text-[11px] leading-tight text-muted">{dict.statsSub}</div>
+                </div>
+              </div>
+            </div>
 
             {/* Carte flottante bas-droite (réservation) */}
             <div className="absolute right-[-9%] bottom-[18%] z-20 hidden w-[190px] rounded-2xl border border-line bg-white p-3.5 shadow-xl sm:block">
@@ -72,5 +83,28 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
         </div>
       </Container>
     </section>
+  );
+}
+
+/* Petit anneau de progression (taux d'occupation). */
+function MiniDonut({ pct }: { pct: number }) {
+  const r = 20;
+  const c = 2 * Math.PI * r;
+  return (
+    <svg width="52" height="52" viewBox="0 0 52 52" className="shrink-0">
+      <circle cx="26" cy="26" r={r} fill="none" stroke="#e6ebe8" strokeWidth="7" />
+      <circle
+        cx="26"
+        cy="26"
+        r={r}
+        fill="none"
+        stroke="#099664"
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeDasharray={c}
+        strokeDashoffset={c * (1 - pct)}
+        transform="rotate(-90 26 26)"
+      />
+    </svg>
   );
 }

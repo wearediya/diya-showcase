@@ -22,7 +22,10 @@
     "receiptsLabel": "Loyers encaissés",
     "receiptsValue": "37 quittances",
     "bookingLabel": "Réservation",
-    "bookingValue": "Chambre 04 · 3 nuits"
+    "bookingValue": "Chambre 04 · 3 nuits",
+    "statsLabel": "Taux d'occupation",
+    "statsValue": "92%",
+    "statsSub": "37 logements occupés"
   },
   "local": {
     "cards": [

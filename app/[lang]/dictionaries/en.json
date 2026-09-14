@@ -22,7 +22,10 @@
     "receiptsLabel": "Rent collected",
     "receiptsValue": "37 receipts",
     "bookingLabel": "Booking",
-    "bookingValue": "Room 04 · 3 nights"
+    "bookingValue": "Room 04 · 3 nights",
+    "statsLabel": "Occupancy rate",
+    "statsValue": "92%",
+    "statsSub": "37 units occupied"
   },
   "local": {
     "cards": [
