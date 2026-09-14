@@ -1,14 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PhoneMockup } from "@/components/ui/PhoneMockup";
-import {
-  Download,
-  Calendar,
-  Check,
-  Receipt,
-  Wallet,
-  TrendingUp,
-} from "@/components/icons";
+import { Download, Check, Receipt, Wallet } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
@@ -41,9 +33,12 @@ export function GreenBanner({ dict }: { dict: Dict["banner"] }) {
             {dict.tag3}
           </Tag>
 
-          <PhoneMockup width={280} className="animate-floaty-slow relative z-10">
-            <BookingScreen dict={dict} />
-          </PhoneMockup>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/all-in-diya.png"
+            alt={dict.title}
+            className="relative z-10 h-auto w-[270px] max-w-full select-none"
+          />
         </div>
       </Container>
     </section>
@@ -65,47 +60,6 @@ function Tag({
     >
       <span className="text-brand">{icon}</span>
       {children}
-    </div>
-  );
-}
-
-function BookingScreen({ dict }: { dict: Dict["banner"] }) {
-  return (
-    <div className="px-4 pb-5 pt-9">
-      <div className="flex items-center justify-between">
-        <div className="text-[15px] font-bold text-ink">Réservation</div>
-        <span className="grid h-8 w-8 place-items-center rounded-full bg-mint/70 text-brand">
-          <Calendar className="h-4 w-4" />
-        </span>
-      </div>
-
-      <div className="mt-4 rounded-2xl border border-line p-4">
-        <div className="flex items-center justify-between">
-          <span className="text-[13px] font-semibold text-ink">Chambre 04</span>
-          <span className="rounded-full bg-mint/70 px-2 py-0.5 text-[11px] font-bold text-brand-ink">
-            3 nuits
-          </span>
-        </div>
-        <div className="mt-3 flex items-center gap-2 text-[12px] text-muted">
-          <span className="rounded-lg bg-soft px-2 py-1">12 août</span>
-          <span>→</span>
-          <span className="rounded-lg bg-soft px-2 py-1">15 août</span>
-        </div>
-      </div>
-
-      <div className="mt-3 rounded-2xl bg-gradient-to-br from-brand to-brand-700 p-4 text-white">
-        <div className="text-[12px] text-white/80">Total</div>
-        <div className="text-[22px] font-extrabold tracking-tight">75 000 FCFA</div>
-        <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 text-[11px] font-semibold">
-          <TrendingUp className="h-3.5 w-3.5" />
-          Encaissé
-        </div>
-      </div>
-
-      <button className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-ink py-3 text-[14px] font-semibold text-white">
-        <Check className="h-4 w-4" />
-        Confirmer la réservation
-      </button>
     </div>
   );
 }
