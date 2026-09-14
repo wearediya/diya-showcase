@@ -110,6 +110,47 @@ export const Star = (p: IconProps) => (
   </svg>
 );
 
+export const Stairs = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M4 20h4v-4h4v-4h4v-4h4" />
+  </svg>
+);
+
+export const DoorRooms = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M5 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17M3 21h16M13 12h.5" />
+  </svg>
+);
+
+export const Bed = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M3 18V9m0 9h18m0 0v-5a3 3 0 0 0-3-3H8V9" />
+    <path d="M3 13h5M6 9.5A1.5 1.5 0 0 1 7.5 8h0" />
+  </svg>
+);
+
+export const Bath = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M4 12h16v3a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-3Z" />
+    <path d="M6 12V6.5A1.5 1.5 0 0 1 7.5 5c.9 0 1.5.6 1.6 1.4M7 18l-1 2m11-2 1 2" />
+  </svg>
+);
+
+export const Wifi = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0" />
+    <path d="M12 19h.01" />
+  </svg>
+);
+
+export const Sofa = (p: IconProps) => (
+  <svg {...base(p)}>
+    <path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" />
+    <path d="M2 14a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v4H2v-4Z" />
+    <path d="M6 20v1M18 20v1" />
+  </svg>
+);
+
 export const Sun = (p: IconProps) => (
   <svg {...base(p)}>
     <circle cx="12" cy="12" r="4" />

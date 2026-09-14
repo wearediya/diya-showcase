@@ -109,9 +109,26 @@
     "title": "Tout Diya, dans votre poche",
     "subtitle": "Une application rapide, pensée pour le mobile, qui marche même quand le réseau ne suit pas.",
     "cta": "Télécharger l'app",
-    "tag1": "Réservation confirmée",
-    "tag2": "Reçu prêt à partager",
-    "tag3": "Trésorerie à jour"
+    "listTitle": "Mes biens",
+    "unitsWord": "logements",
+    "createTitle": "Nouveau logement",
+    "fieldNumber": "Numéro / Nom du logement",
+    "fieldType": "Type de logement",
+    "fieldRent": "Loyer conseillé",
+    "typeExample": "Appartement 2 pièces",
+    "saveLabel": "Enregistrer"
+  },
+  "units": {
+    "vacant": "Vacant",
+    "occupied": "Occupé",
+    "yes": "Oui",
+    "no": "Non",
+    "floor": "Étage",
+    "rooms": "Pièces",
+    "beds": "Chambres",
+    "baths": "Salles de bain",
+    "furnished": "Meublé",
+    "wifi": "Connexion internet"
   },
   "services": {
     "title": "Un accompagnement à la hauteur",

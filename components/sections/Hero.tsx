@@ -1,9 +1,18 @@
 import { Container } from "@/components/ui/Container";
 import { PillButton } from "@/components/ui/PillButton";
-import { Calendar, Chart } from "@/components/icons";
+import { UnitSpecCard, type UnitSpec } from "@/components/ui/UnitSpecCard";
+import { Calendar, Chart, Stairs, DoorRooms, Bed, Bath, Sofa, Wifi } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
-export function Hero({ dict }: { dict: Dict["hero"] }) {
+export function Hero({ dict, units }: { dict: Dict["hero"]; units: Dict["units"] }) {
+  const apartmentSpecs: UnitSpec[] = [
+    { icon: <Stairs className="h-4 w-4" />, value: "2", label: units.floor },
+    { icon: <DoorRooms className="h-4 w-4" />, value: "3", label: units.rooms },
+    { icon: <Bed className="h-4 w-4" />, value: "2", label: units.beds },
+    { icon: <Bath className="h-4 w-4" />, value: "1", label: units.baths },
+    { icon: <Sofa className="h-4 w-4" />, value: units.yes, label: units.furnished },
+    { icon: <Wifi className="h-4 w-4" />, value: units.yes, label: units.wifi },
+  ];
   return (
     <section className="relative overflow-hidden">
       <div className="glow-mint pointer-events-none absolute inset-x-0 top-0 h-[560px]" />
@@ -40,8 +49,17 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
               className="pointer-events-none relative z-10 mx-auto h-auto w-full select-none"
             />
 
+            {/* Carte flottante haut-droite : fiche appartement (spec-cards) */}
+            <UnitSpecCard
+              name="Appartement B2"
+              status={units.occupied}
+              specs={apartmentSpecs}
+              width={228}
+              className="absolute right-[-22%] top-[-1%] z-20 hidden lg:block"
+            />
+
             {/* Carte flottante haut-gauche : statistique (taux d'occupation) */}
-            <div className="absolute left-[-12%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-card p-4 shadow-xl sm:block">
+            <div className="absolute left-[-30%] top-[3%] z-20 hidden w-[214px] rounded-2xl border border-line bg-card p-4 shadow-xl sm:block">
               <div className="flex items-center justify-between">
                 <span className="text-[12.5px] font-medium text-muted">{dict.statsLabel}</span>
                 <span className="grid h-7 w-7 place-items-center rounded-lg bg-mint/60 text-brand">

@@ -23,12 +23,12 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
     <>
       <Header lang={lang} nav={dict.nav} />
       <main>
-        <Hero dict={dict.hero} />
+        <Hero dict={dict.hero} units={dict.units} />
         <LocalReality dict={dict.local} />
         <Priority dict={dict.priority} />
         <Split dict={dict.split} />
         <Proof dict={dict.proof} />
-        <GreenBanner dict={dict.banner} />
+        <GreenBanner dict={dict.banner} units={dict.units} />
         <Services dict={dict.services} />
         <Testimonials dict={dict.testimonials} />
         <Faq dict={dict.faq} />
