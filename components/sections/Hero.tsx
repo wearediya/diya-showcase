@@ -10,11 +10,7 @@ export function Hero({ dict }: { dict: Dict["hero"] }) {
       <div className="glow-mint pointer-events-none absolute inset-x-0 top-0 h-[560px]" />
       <Container className="relative pt-14 pb-4 sm:pt-20">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-mint-200 bg-mint/50 px-3.5 py-1.5 text-[13px] font-semibold text-brand-ink">
-            <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-            {dict.badge}
-          </span>
-          <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-[56px]">
+          <h1 className="text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl md:text-[56px]">
             {dict.title}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-[17px] leading-7 text-muted">

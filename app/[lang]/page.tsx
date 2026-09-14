@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
-import { TrustStrip } from "@/components/sections/TrustStrip";
+import { LocalReality } from "@/components/sections/LocalReality";
 import { Priority } from "@/components/sections/Priority";
 import { Split } from "@/components/sections/Split";
 import { Proof } from "@/components/sections/Proof";
@@ -25,7 +25,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
       <Header lang={lang} nav={dict.nav} />
       <main>
         <Hero dict={dict.hero} />
-        <TrustStrip dict={dict.trust} />
+        <LocalReality dict={dict.local} />
         <Priority dict={dict.priority} />
         <Split dict={dict.split} />
         <Proof dict={dict.proof} />

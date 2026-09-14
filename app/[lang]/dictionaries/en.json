@@ -12,7 +12,6 @@
     "menu": "Menu"
   },
   "hero": {
-    "badge": "100% offline · in CFA",
     "title": "Rental management, simple and available everywhere.",
     "subtitle": "Manage your units, tenants, rent and expenses from your phone — even with no connection. Receipts, bookings and cash flow included.",
     "primary": "Download the app",
@@ -26,9 +25,27 @@
     "bookingLabel": "Booking",
     "bookingValue": "Room 04 · 3 nights"
   },
-  "trust": {
-    "label": "Built for every kind of property",
-    "items": ["Apartments", "Houses", "Hotels", "Furnished", "Shops", "Offices"]
+  "local": {
+    "title": "Built for the reality of Togo",
+    "subtitle": "Diya fits the way things really work locally — from how you get paid to how you share a receipt.",
+    "cards": [
+      {
+        "title": "Everything in CFA",
+        "desc": "Rent, expenses and receipts in CFA francs, no conversion, no headache."
+      },
+      {
+        "title": "Receipts on WhatsApp",
+        "desc": "Share rent receipts on the channel your tenants already use every day."
+      },
+      {
+        "title": "Cash & Mobile Money",
+        "desc": "Track every payment, in cash or mobile money, with zero hassle."
+      },
+      {
+        "title": "All your properties",
+        "desc": "Villas, rooms, shops, furnished units or offices: Diya adapts to your portfolio."
+      }
+    ]
   },
   "priority": {
     "title": "A head start for landlords",
@@ -78,7 +95,7 @@
     "chatButton": "Share the receipt"
   },
   "proof": {
-    "title": "Built for the real world",
+    "title": "Reliable and secure, wherever you are",
     "subtitle": "A fast, reliable app made for West Africa.",
     "cards": [
       { "caption": "Works with no Internet, anywhere in Togo" },

@@ -42,12 +42,8 @@ export function Footer({ dict }: { dict: Dict["footer"] }) {
         </div>
       </Container>
 
-      <div
-        aria-hidden
-        className="pointer-events-none select-none px-4 text-center font-extrabold leading-[0.8] tracking-tighter text-white/[0.05]"
-        style={{ fontSize: "clamp(4rem, 20vw, 15rem)" }}
-      >
-        diya
+      <div className="pointer-events-none flex select-none justify-center px-4 pb-3">
+        <Logo dark decorative className="h-auto w-[min(760px,90%)] opacity-[0.06]" />
       </div>
     </footer>
   );

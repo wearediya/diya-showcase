@@ -12,7 +12,6 @@
     "menu": "Menu"
   },
   "hero": {
-    "badge": "100 % hors‑ligne · en FCFA",
     "title": "La gestion locative, simple et accessible partout.",
     "subtitle": "Gérez vos biens, locataires, loyers et dépenses depuis votre téléphone — même sans connexion. Quittances, réservations et trésorerie inclus.",
     "primary": "Télécharger l'app",
@@ -26,9 +25,27 @@
     "bookingLabel": "Réservation",
     "bookingValue": "Chambre 04 · 3 nuits"
   },
-  "trust": {
-    "label": "Pensé pour tous vos biens",
-    "items": ["Appartements", "Maisons", "Hôtels", "Meublés", "Commerces", "Bureaux"]
+  "local": {
+    "title": "Conçu pour la réalité du Togo",
+    "subtitle": "Diya colle aux usages locaux — de la façon dont on encaisse à celle dont on partage un reçu.",
+    "cards": [
+      {
+        "title": "Tout en FCFA",
+        "desc": "Loyers, dépenses et reçus en francs CFA, sans conversion ni casse-tête."
+      },
+      {
+        "title": "Reçus sur WhatsApp",
+        "desc": "Partagez quittances et reçus sur le canal que vos locataires utilisent déjà."
+      },
+      {
+        "title": "Espèces & Mobile Money",
+        "desc": "Suivez chaque paiement, en liquide comme en mobile money, sans complication."
+      },
+      {
+        "title": "Tous vos biens",
+        "desc": "Villas, chambres, magasins, meublés ou bureaux : Diya s'adapte à votre parc."
+      }
+    ]
   },
   "priority": {
     "title": "Une longueur d'avance pour les bailleurs",
@@ -78,7 +95,7 @@
     "chatButton": "Partager la quittance"
   },
   "proof": {
-    "title": "Conçu pour la réalité du terrain",
+    "title": "Fiable et sécurisé, où que vous soyez",
     "subtitle": "Une app rapide et fiable, faite pour l'Afrique de l'Ouest.",
     "cards": [
       { "caption": "Fonctionne sans Internet, partout au Togo" },
