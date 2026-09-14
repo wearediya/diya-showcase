@@ -109,9 +109,16 @@
     "title": "All of Diya, in your pocket",
     "subtitle": "A fast, mobile-first app that keeps working even when the network doesn't.",
     "cta": "Download the app",
-    "tag1": "Booking confirmed",
-    "tag2": "Receipt ready to share",
-    "tag3": "Cash flow up to date"
+    "listTitle": "My properties",
+    "unitsWord": "units",
+    "createTitle": "New unit",
+    "fieldNumber": "Number",
+    "fieldType": "Type",
+    "fieldRent": "Monthly rent",
+    "saveLabel": "Save",
+    "occupied": "Occupied",
+    "tenantLabel": "Tenant",
+    "depositLabel": "Deposit"
   },
   "services": {
     "title": "Support that measures up",
