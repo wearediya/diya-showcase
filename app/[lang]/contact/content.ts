@@ -24,7 +24,6 @@ export type ContactContent = {
 
 // Coordonnées réelles (support de l'app Diya).
 const EMAIL = "wearekarfi@gmail.com";
-const PHONE_INTL = "+22870407470";
 const PHONE_HUMAN = "+228 70 40 74 70";
 const WA_DIGITS = "22870407470";
 
@@ -37,7 +36,7 @@ const fr: ContactContent = {
     "Diya est édité par KARFI. Une question, une démo ou un partenariat ? Écrivez-nous — nous répondons vite.",
   aboutHeading: "À propos de Diya",
   aboutParas: [
-    "Diya est une application mobile de gestion locative pensée pour les propriétaires et gestionnaires d'Afrique de l'Ouest. Simple, 100 % hors-ligne et en FCFA, elle réunit biens, locataires, loyers, dépenses, réservations et reçus au même endroit.",
+    "Diya est une application mobile de gestion locative pensée pour les propriétaires et gestionnaires d'Afrique de l'Ouest. Simple, 100 % hors-ligne et multi-devises, elle réunit biens, locataires, loyers, dépenses, réservations et reçus au même endroit.",
     "Notre mission : rendre la gestion locative accessible à tous, même sans connexion Internet stable. Diya est un produit KARFI.",
   ],
   values: [
@@ -47,7 +46,7 @@ const fr: ContactContent = {
     },
     {
       title: "Pensé pour la région",
-      desc: "FCFA, WhatsApp, mobile money, espèces : Diya colle aux usages du terrain.",
+      desc: "Multi-devises, WhatsApp, mobile money, espèces : Diya colle aux usages du terrain.",
     },
     {
       title: "Vos données protégées",
@@ -65,7 +64,6 @@ const fr: ContactContent = {
       href: `https://wa.me/${WA_DIGITS}`,
     },
     { kind: "email", label: "E-mail", value: EMAIL, href: `mailto:${EMAIL}` },
-    { kind: "phone", label: "Téléphone", value: PHONE_HUMAN, href: `tel:${PHONE_INTL}` },
   ],
   locationLabel: "Où nous sommes",
   location: "Lomé, Togo",
@@ -80,7 +78,7 @@ const en: ContactContent = {
     "Diya is a KARFI product. A question, a demo or a partnership? Write to us — we reply fast.",
   aboutHeading: "About Diya",
   aboutParas: [
-    "Diya is a mobile rental-management app built for landlords and property managers in West Africa. Simple, 100% offline and in CFA francs, it brings properties, tenants, rent, expenses, bookings and receipts together in one place.",
+    "Diya is a mobile rental-management app built for landlords and property managers in West Africa. Simple, 100% offline and multi-currency, it brings properties, tenants, rent, expenses, bookings and receipts together in one place.",
     "Our mission: make rental management accessible to everyone, even without a stable Internet connection. Diya is a KARFI product.",
   ],
   values: [
@@ -90,7 +88,7 @@ const en: ContactContent = {
     },
     {
       title: "Built for the region",
-      desc: "CFA, WhatsApp, mobile money, cash: Diya fits how things really work.",
+      desc: "Multi-currency, WhatsApp, mobile money, cash: Diya fits how things really work.",
     },
     {
       title: "Your data protected",
@@ -107,7 +105,6 @@ const en: ContactContent = {
       href: `https://wa.me/${WA_DIGITS}`,
     },
     { kind: "email", label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-    { kind: "phone", label: "Phone", value: PHONE_HUMAN, href: `tel:${PHONE_INTL}` },
   ],
   locationLabel: "Where we are",
   location: "Lomé, Togo",
