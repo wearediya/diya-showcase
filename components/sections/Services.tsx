@@ -26,15 +26,11 @@ export function Services({ dict }: { dict: Dict["services"] }) {
             return (
               <div
                 key={card.title}
-                className="relative z-10 flex items-start gap-5 rounded-3xl border border-line bg-card p-6 shadow-[0_20px_50px_-40px_rgba(11,21,18,0.5)] sm:p-7"
+                className="relative z-10 rounded-3xl border border-line bg-card p-6 shadow-[0_20px_50px_-40px_rgba(11,21,18,0.5)] sm:p-7"
               >
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand">
-                  <Icon className="h-7 w-7" />
-                </span>
-                <div>
-                  <h3 className="text-lg font-bold text-ink">{card.title}</h3>
-                  <p className="mt-1.5 text-[14.5px] leading-6 text-muted">{card.desc}</p>
-                </div>
+                <Icon className="h-9 w-9 text-brand" />
+                <h3 className="mt-4 text-xl font-bold text-ink">{card.title}</h3>
+                <p className="mt-2 text-[14.5px] leading-6 text-muted">{card.desc}</p>
               </div>
             );
           })}
