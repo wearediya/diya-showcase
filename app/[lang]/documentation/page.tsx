@@ -42,7 +42,7 @@ export default async function DocumentationPage({
       <Header lang={lang} nav={dict.nav} />
       <main>
         {/* En-tête du guide */}
-        <PageHero badge={doc.offline} title={doc.title} subtitle={doc.subtitle} />
+        <PageHero title={doc.title} subtitle={doc.subtitle} />
 
         {/* Sommaire + contenu */}
         <Container className="py-12 sm:py-14">
