@@ -30,14 +30,14 @@ const WA_DIGITS = "22870407470";
 const fr: ContactContent = {
   metaTitle: "Contact & à propos — Diya",
   metaDescription:
-    "À propos de Diya (édité par KARFI) et comment nous contacter : WhatsApp, e-mail, téléphone.",
+    "À propos de Diya et comment nous contacter : WhatsApp, e-mail, téléphone.",
   title: "À propos & contact",
   subtitle:
-    "Diya est édité par KARFI. Une question, une démo ou un partenariat ? Écrivez-nous — nous répondons vite.",
+    "Une question, une démo ou un partenariat ? Écrivez-nous — nous répondons vite.",
   aboutHeading: "À propos de Diya",
   aboutParas: [
     "Diya est une application mobile de gestion locative pensée pour les propriétaires et gestionnaires d'Afrique de l'Ouest. Simple, 100 % hors-ligne et multi-devises, elle réunit biens, locataires, loyers, dépenses, réservations et reçus au même endroit.",
-    "Notre mission : rendre la gestion locative accessible à tous, même sans connexion Internet stable. Diya est un produit KARFI.",
+    "Notre mission : rendre la gestion locative accessible à tous, même sans connexion Internet stable.",
   ],
   values: [
     {
@@ -72,14 +72,14 @@ const fr: ContactContent = {
 const en: ContactContent = {
   metaTitle: "Contact & about — Diya",
   metaDescription:
-    "About Diya (a KARFI product) and how to reach us: WhatsApp, email, phone.",
+    "About Diya and how to reach us: WhatsApp, email, phone.",
   title: "About & contact",
   subtitle:
-    "Diya is a KARFI product. A question, a demo or a partnership? Write to us — we reply fast.",
+    "A question, a demo or a partnership? Write to us — we reply fast.",
   aboutHeading: "About Diya",
   aboutParas: [
     "Diya is a mobile rental-management app built for landlords and property managers in West Africa. Simple, 100% offline and multi-currency, it brings properties, tenants, rent, expenses, bookings and receipts together in one place.",
-    "Our mission: make rental management accessible to everyone, even without a stable Internet connection. Diya is a KARFI product.",
+    "Our mission: make rental management accessible to everyone, even without a stable Internet connection.",
   ],
   values: [
     {

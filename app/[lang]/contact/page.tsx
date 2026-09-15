@@ -49,7 +49,7 @@ export default async function ContactPage({
         {/* À propos */}
         <section className="bg-bg">
           <Container className="py-14 sm:py-16">
-            <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
               <div>
                 <span className="text-[13px] font-bold uppercase tracking-wider text-brand">
                   {c.aboutHeading}
@@ -62,25 +62,31 @@ export default async function ContactPage({
                   ))}
                 </div>
               </div>
-              <div className="space-y-4">
-                {c.values.map((v, i) => {
-                  const Icon = valueIcons[i] ?? Shield;
-                  return (
-                    <div
-                      key={v.title}
-                      className="flex items-start gap-4 rounded-3xl border border-line bg-card p-5"
-                    >
-                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand">
-                        <Icon className="h-6 w-6" />
-                      </span>
-                      <div>
-                        <h3 className="text-[16px] font-bold text-ink">{v.title}</h3>
-                        <p className="mt-1 text-[14.5px] leading-6 text-muted">{v.desc}</p>
-                      </div>
-                    </div>
-                  );
-                })}
+              {/* Logo Diya (à la place des anciennes cartes) */}
+              <div className="flex items-center justify-center rounded-[2rem] border border-mint-200 bg-mint/30 px-8 py-16">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logos/logo.svg"
+                  alt="Diya"
+                  className="w-full max-w-[260px]"
+                />
               </div>
+            </div>
+
+            {/* Valeurs — une ligne de trois, séparées : icône (sans fond), titre, description */}
+            <div className="mt-14 grid gap-8 border-t border-line pt-12 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-line">
+              {c.values.map((v, i) => {
+                const Icon = valueIcons[i] ?? Shield;
+                return (
+                  <div key={v.title} className="sm:px-8 sm:first:pl-0 sm:last:pr-0">
+                    <Icon className="h-9 w-9 text-brand" />
+                    <h3 className="mt-4 text-[16px] font-bold text-ink">{v.title}</h3>
+                    <p className="mt-1.5 text-[14.5px] leading-6 text-muted">
+                      {v.desc}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </Container>
         </section>

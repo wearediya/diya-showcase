@@ -4,6 +4,7 @@
     "description": "Diya is the mobile rental-management app for landlords and property managers in West Africa: units, tenants, rent, expenses, bookings and receipts — 100% offline, in CFA francs."
   },
   "nav": {
+    "home": "Home",
     "features": "Features",
     "testimonials": "Reviews",
     "faq": "FAQ",
@@ -250,6 +251,6 @@
       }
     ],
     "copyright": "© 2026 Diya. All rights reserved.",
-    "madeBy": "A KARFI product."
+    "madeBy": "Made in Togo."
   }
 }
