@@ -67,7 +67,7 @@ export default async function DocumentationPage({
           </div>
         </Container>
       </main>
-      <Footer dict={dict.footer} />
+      <Footer dict={dict.footer} lang={lang} />
     </>
   );
 }

@@ -1,8 +1,11 @@
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
-import type { Dict } from "@/app/[lang]/dictionaries";
+import type { Dict, Locale } from "@/app/[lang]/dictionaries";
 
-export function Footer({ dict }: { dict: Dict["footer"] }) {
+export function Footer({ dict, lang }: { dict: Dict["footer"]; lang: Locale }) {
+  const resolve = (href: string) =>
+    href.startsWith("http") ? href : `/${lang}${href}`;
+
   return (
     <footer className="relative overflow-hidden bg-night text-night-muted">
       <Container className="pt-16">
@@ -21,12 +24,12 @@ export function Footer({ dict }: { dict: Dict["footer"] }) {
                 </h3>
                 <ul className="mt-4 space-y-2.5">
                   {col.links.map((link) => (
-                    <li key={link}>
+                    <li key={link.label}>
                       <a
-                        href="#"
+                        href={resolve(link.href)}
                         className="text-[14.5px] text-night-muted transition-colors hover:text-white"
                       >
-                        {link}
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -41,10 +44,6 @@ export function Footer({ dict }: { dict: Dict["footer"] }) {
           <p className="text-[13px] font-medium text-white/70">{dict.madeBy}</p>
         </div>
       </Container>
-
-      <div className="pointer-events-none flex select-none justify-center px-4 pb-3">
-        <Logo dark decorative className="h-auto w-[min(760px,90%)] opacity-[0.06]" />
-      </div>
     </footer>
   );
 }

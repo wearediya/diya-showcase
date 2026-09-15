@@ -34,7 +34,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <Faq dict={dict.faq} />
         <CtaBand dict={dict.cta} />
       </main>
-      <Footer dict={dict.footer} />
+      <Footer dict={dict.footer} lang={lang} />
     </>
   );
 }
