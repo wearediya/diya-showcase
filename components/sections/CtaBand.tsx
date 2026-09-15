@@ -1,5 +1,7 @@
+import Image from "next/image";
+
 import { Container } from "@/components/ui/Container";
-import { AppStore, TrendingUp } from "@/components/icons";
+import { TrendingUp } from "@/components/icons";
 import type { Dict } from "@/app/[lang]/dictionaries";
 
 export function CtaBand({ dict }: { dict: Dict["cta"] }) {
@@ -16,9 +18,20 @@ export function CtaBand({ dict }: { dict: Dict["cta"] }) {
               <p className="mt-4 max-w-md text-[16.5px] leading-7 text-brand-ink/75">
                 {dict.subtitle}
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <StoreButton store="App Store" label="App Store" />
-                <StoreButton store="Google Play" label="Google Play" />
+              <div className="mt-7">
+                <a
+                  href="#"
+                  aria-label="Google Play"
+                  className="inline-block transition-transform hover:-translate-y-0.5"
+                >
+                  <Image
+                    src="/get-it-on-google-play.png"
+                    alt="Google Play"
+                    width={202}
+                    height={60}
+                    className="h-auto w-[202px] max-w-full"
+                  />
+                </a>
               </div>
             </div>
 
@@ -49,22 +62,5 @@ export function CtaBand({ dict }: { dict: Dict["cta"] }) {
         </div>
       </Container>
     </section>
-  );
-}
-
-function StoreButton({ store, label }: { store: string; label: string }) {
-  return (
-    <a
-      href="#"
-      className="inline-flex items-center gap-3 rounded-2xl bg-ink px-5 py-3 text-white transition-colors hover:bg-ink-2"
-    >
-      <AppStore className="h-6 w-6" />
-      <span className="flex flex-col leading-tight">
-        <span className="text-[10px] uppercase tracking-wide text-white/60">
-          {store === "App Store" ? "Download on the" : "Get it on"}
-        </span>
-        <span className="text-[15px] font-semibold">{label}</span>
-      </span>
-    </a>
   );
 }
