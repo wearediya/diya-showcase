@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { getDictionary, hasLocale } from "../dictionaries";
@@ -84,29 +85,49 @@ export default async function ContactPage({
           </Container>
         </section>
 
-        {/* Contact */}
+        {/* Contact — image + infos */}
         <section className="border-t border-line bg-soft/50">
           <Container className="py-14 sm:py-16">
-            <div className="max-w-2xl">
-              <span className="text-[13px] font-bold uppercase tracking-wider text-brand">
-                {c.contactHeading}
-              </span>
-              <p className="mt-3 text-[17px] leading-7 text-ink/80">{c.contactLead}</p>
-            </div>
+            <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+              {/* Image */}
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[3/2] lg:aspect-auto lg:min-h-[540px]">
+                <Image
+                  src="/call-us.jpg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/30 via-transparent to-transparent" />
+              </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {c.methods.map((m) => (
-                <MethodCard key={m.kind} method={m} />
-              ))}
-            </div>
+              {/* Infos (sans cards) */}
+              <div className="flex flex-col justify-center">
+                <span className="text-[13px] font-bold uppercase tracking-wider text-brand">
+                  {c.contactHeading}
+                </span>
+                <p className="mt-3 text-[17px] leading-7 text-ink/80">
+                  {c.contactLead}
+                </p>
 
-            <div className="mt-4 inline-flex items-center gap-2.5 rounded-2xl border border-line bg-card px-5 py-4">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-mint/60 text-brand">
-                <MapPin className="h-5 w-5" />
-              </span>
-              <div>
-                <div className="text-[13px] text-muted">{c.locationLabel}</div>
-                <div className="text-[15px] font-semibold text-ink">{c.location}</div>
+                <div className="mt-8 divide-y divide-line border-y border-line">
+                  {c.methods.map((m) => (
+                    <MethodRow key={m.kind} method={m} />
+                  ))}
+                  <div className="flex items-center gap-4 py-4">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand">
+                      <MapPin className="h-[22px] w-[22px]" />
+                    </span>
+                    <div className="min-w-0">
+                      <div className="text-[13px] text-muted">
+                        {c.locationLabel}
+                      </div>
+                      <div className="text-[15.5px] font-bold text-ink">
+                        {c.location}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Container>
@@ -117,7 +138,7 @@ export default async function ContactPage({
   );
 }
 
-function MethodCard({ method }: { method: ContactMethod }) {
+function MethodRow({ method }: { method: ContactMethod }) {
   const Icon = methodIcon[method.kind];
   const external = method.kind === "whatsapp";
   return (
@@ -125,14 +146,16 @@ function MethodCard({ method }: { method: ContactMethod }) {
       href={method.href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="group flex items-center gap-4 rounded-3xl border border-line bg-card p-5 transition-colors hover:border-brand/40 hover:bg-soft/40"
+      className="group flex items-center gap-4 py-4 transition-colors"
     >
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand">
-        <Icon className="h-6 w-6" />
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-mint/60 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+        <Icon className="h-[22px] w-[22px]" />
       </span>
       <div className="min-w-0">
         <div className="text-[13px] text-muted">{method.label}</div>
-        <div className="truncate text-[15.5px] font-bold text-ink">{method.value}</div>
+        <div className="truncate text-[15.5px] font-bold text-ink">
+          {method.value}
+        </div>
       </div>
       <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-brand" />
     </a>
