@@ -85,24 +85,23 @@ export default async function ContactPage({
           </Container>
         </section>
 
-        {/* Contact — image plein bord (gauche/top/bottom) + infos */}
-        <section className="relative border-t border-line bg-soft/50">
-          {/* Image collée au bord gauche, en haut et en bas */}
-          <div className="relative min-h-[340px] sm:min-h-[460px] lg:absolute lg:inset-y-0 lg:left-0 lg:min-h-0 lg:w-1/2">
-            <Image
-              src="/call-us.jpg"
-              alt=""
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/25 via-transparent to-transparent" />
-          </div>
+        {/* Contact — image + infos */}
+        <section className="border-t border-line bg-soft/50">
+          <Container className="py-14 sm:py-16">
+            <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+              {/* Image */}
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[3/2] lg:aspect-auto lg:min-h-[540px]">
+                <Image
+                  src="/call-us.jpg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/30 via-transparent to-transparent" />
+              </div>
 
-          {/* Infos (sans cards), alignées au reste du site */}
-          <Container className="py-14 sm:py-16 lg:py-24">
-            <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-              <div className="hidden lg:block" aria-hidden="true" />
+              {/* Infos (sans cards) */}
               <div className="flex flex-col justify-center">
                 <span className="text-[13px] font-bold uppercase tracking-wider text-brand">
                   {c.contactHeading}
