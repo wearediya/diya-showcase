@@ -239,6 +239,13 @@
           { "label": "FAQ", "href": "#faq" },
           { "label": "Contact", "href": "/contact" }
         ]
+      },
+      {
+        "title": "Légal",
+        "links": [
+          { "label": "Confidentialité", "href": "/privacy" },
+          { "label": "Conditions", "href": "/terms" }
+        ]
       }
     ],
     "copyright": "© 2026 Diya. Tous droits réservés.",

@@ -8,7 +8,7 @@ import { Header } from "@/components/sections/Header";
 import { PageHero } from "@/components/sections/PageHero";
 import { Footer } from "@/components/sections/Footer";
 import { docs, type DocBlock, type DocSection } from "./content";
-import { Toc } from "./Toc";
+import { Toc } from "@/components/ui/Toc";
 
 export async function generateMetadata({
   params,
