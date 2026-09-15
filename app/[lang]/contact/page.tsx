@@ -112,7 +112,7 @@ export default async function ContactPage({
           </Container>
         </section>
       </main>
-      <Footer dict={dict.footer} />
+      <Footer dict={dict.footer} lang={lang} />
     </>
   );
 }

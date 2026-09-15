@@ -226,15 +226,19 @@
     "columns": [
       {
         "title": "Product",
-        "links": ["Features", "Bookings", "Download"]
+        "links": [
+          { "label": "Features", "href": "#features" },
+          { "label": "Reviews", "href": "#testimonials" },
+          { "label": "Download", "href": "#download" }
+        ]
       },
       {
         "title": "Resources",
-        "links": ["FAQ", "Getting started", "Support", "Privacy"]
-      },
-      {
-        "title": "Diya",
-        "links": ["About", "Contact", "Blog", "Open source"]
+        "links": [
+          { "label": "Documentation", "href": "/documentation" },
+          { "label": "FAQ", "href": "#faq" },
+          { "label": "Contact", "href": "/contact" }
+        ]
       }
     ],
     "copyright": "© 2026 Diya. All rights reserved.",
