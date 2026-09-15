@@ -14,6 +14,7 @@ import type { Dict, Locale } from "@/app/[lang]/dictionaries";
 export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -22,11 +23,19 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const home = `/${lang}`;
   const links = [
-    { href: `/${lang}#features`, label: nav.features },
-    { href: `/${lang}/documentation`, label: nav.documentation },
-    { href: `/${lang}/contact`, label: nav.contact },
+    { href: `/${lang}#features`, label: nav.features, match: home },
+    { href: `/${lang}/documentation`, label: nav.documentation, match: `/${lang}/documentation` },
+    { href: `/${lang}/contact`, label: nav.contact, match: `/${lang}/contact` },
   ];
+
+  // Onglet actif selon la route courante. Le lien « Fonctionnalités »
+  // (ancre de la home) n'est actif que sur la page d'accueil exacte.
+  const isActive = (match: string) =>
+    match === home
+      ? pathname === home || pathname === `${home}/`
+      : pathname === match || (pathname?.startsWith(`${match}/`) ?? false);
 
   return (
     <header
@@ -42,15 +51,23 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="rounded-full px-3.5 py-2 text-[15px] font-medium text-muted transition-colors hover:bg-soft hover:text-ink"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) => {
+            const active = isActive(l.match);
+            return (
+              <a
+                key={l.href}
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={`rounded-full px-3.5 py-2 text-[15px] font-medium transition-colors ${
+                  active
+                    ? "bg-mint/60 text-brand-ink"
+                    : "text-muted hover:bg-soft hover:text-ink"
+                }`}
+              >
+                {l.label}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -70,16 +87,22 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dict["nav"] }) {
       {open && (
         <div className="border-t border-line bg-bg md:hidden">
           <Container className="flex flex-col gap-1 py-4">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-3 text-[15px] font-medium text-ink hover:bg-soft"
-              >
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) => {
+              const active = isActive(l.match);
+              return (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className={`rounded-xl px-3 py-3 text-[15px] font-medium ${
+                    active ? "bg-mint/60 text-brand-ink" : "text-ink hover:bg-soft"
+                  }`}
+                >
+                  {l.label}
+                </a>
+              );
+            })}
             <Button href="#download" className="mt-2 w-full">
               <Download className="h-[18px] w-[18px]" />
               {nav.download}
