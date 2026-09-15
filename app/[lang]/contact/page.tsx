@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "../dictionaries";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/sections/Header";
+import { PageHero } from "@/components/sections/PageHero";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsApp, Mail, Phone, ArrowRight, WifiOff, MapPin, Shield } from "@/components/icons";
 import { contact, type ContactMethod } from "./content";
@@ -42,18 +43,7 @@ export default async function ContactPage({
       <Header lang={lang} nav={dict.nav} />
       <main>
         {/* En-tête */}
-        <section className="border-b border-line bg-soft/60">
-          <Container className="py-14 sm:py-16">
-            <div className="max-w-2xl">
-              <h1 className="text-balance text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
-                {c.title}
-              </h1>
-              <p className="mt-4 text-pretty text-[17px] leading-7 text-muted">
-                {c.subtitle}
-              </p>
-            </div>
-          </Container>
-        </section>
+        <PageHero title={c.title} subtitle={c.subtitle} />
 
         {/* À propos */}
         <section className="bg-bg">

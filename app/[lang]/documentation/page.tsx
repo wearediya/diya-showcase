@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, hasLocale, type Locale } from "../dictionaries";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/sections/Header";
+import { PageHero } from "@/components/sections/PageHero";
 import { Footer } from "@/components/sections/Footer";
 import { docs, type DocBlock, type DocSection } from "./content";
 import { Toc } from "./Toc";
@@ -41,22 +42,7 @@ export default async function DocumentationPage({
       <Header lang={lang} nav={dict.nav} />
       <main>
         {/* En-tête du guide */}
-        <section className="border-b border-line bg-soft/60">
-          <Container className="py-14 sm:py-16">
-            <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-mint-200 bg-mint/50 px-3 py-1 text-[12.5px] font-semibold text-brand-ink">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-                {doc.offline}
-              </span>
-              <h1 className="mt-4 text-balance text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
-                {doc.title}
-              </h1>
-              <p className="mt-4 text-pretty text-[17px] leading-7 text-muted">
-                {doc.subtitle}
-              </p>
-            </div>
-          </Container>
-        </section>
+        <PageHero badge={doc.offline} title={doc.title} subtitle={doc.subtitle} />
 
         {/* Sommaire + contenu */}
         <Container className="py-12 sm:py-14">
