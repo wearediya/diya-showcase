@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getDictionary, hasLocale } from "../dictionaries";
+import { pageSeo } from "@/lib/seo";
 import { LegalPage } from "@/components/sections/LegalPage";
 import { terms } from "./content";
 
@@ -13,7 +14,12 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const doc = terms[lang];
-  return { title: doc.metaTitle, description: doc.metaDescription };
+  return pageSeo({
+    lang,
+    path: "/terms",
+    title: doc.metaTitle,
+    description: doc.metaDescription,
+  });
 }
 
 export default async function TermsPage({

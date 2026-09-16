@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 
 import { getDictionary, hasLocale, type Locale } from "../dictionaries";
+import { pageSeo } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/sections/Header";
 import { PageHero } from "@/components/sections/PageHero";
@@ -18,7 +19,12 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const doc = docs[lang];
-  return { title: doc.metaTitle, description: doc.metaDescription };
+  return pageSeo({
+    lang,
+    path: "/documentation",
+    title: doc.metaTitle,
+    description: doc.metaDescription,
+  });
 }
 
 const uiLabels = {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { getDictionary, hasLocale } from "../dictionaries";
+import { pageSeo } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/sections/Header";
 import { PageHero } from "@/components/sections/PageHero";
@@ -18,7 +19,12 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const c = contact[lang];
-  return { title: c.metaTitle, description: c.metaDescription };
+  return pageSeo({
+    lang,
+    path: "/contact",
+    title: c.metaTitle,
+    description: c.metaDescription,
+  });
 }
 
 const methodIcon = {
