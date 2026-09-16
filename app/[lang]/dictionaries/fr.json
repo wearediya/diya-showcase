@@ -4,6 +4,7 @@
     "description": "Diya est l'application mobile de gestion locative pour propriétaires et gestionnaires en Afrique de l'Ouest : biens, locataires, loyers, dépenses, réservations et reçus — 100 % hors‑ligne, en FCFA."
   },
   "nav": {
+    "home": "Accueil",
     "features": "Fonctionnalités",
     "testimonials": "Avis",
     "faq": "FAQ",
@@ -250,6 +251,6 @@
       }
     ],
     "copyright": "© 2026 Diya. Tous droits réservés.",
-    "madeBy": "Un produit KARFI."
+    "madeBy": "Fait au Togo."
   }
 }
