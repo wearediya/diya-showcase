@@ -60,7 +60,7 @@ export function FeatureScroll({ dict }: { dict: Dict["featureScroll"] }) {
   }, [active]);
 
   return (
-    <section id="features" className="scroll-mt-20 bg-bg py-20 sm:py-24">
+    <section id="features" className="scroll-mt-20 bg-bg py-16 sm:py-20">
       <Container>
         <SectionHeading
           eyebrow="Diya"
@@ -68,10 +68,10 @@ export function FeatureScroll({ dict }: { dict: Dict["featureScroll"] }) {
           subtitle={dict.subtitle}
         />
 
-        <div className="mt-12 lg:mt-16 lg:grid lg:grid-cols-2 lg:gap-16">
+        <div className="mt-8 lg:mt-10 lg:grid lg:grid-cols-2 lg:gap-16">
           {/* Visuel collant (desktop) */}
           <div className="hidden lg:block">
-            <div className="sticky top-24 flex h-[78vh] items-center justify-center">
+            <div className="sticky top-24 flex h-[58vh] items-center justify-center">
               <div className="relative flex h-full w-full items-center justify-center">
                 {FEATURE_MOCKS.map((Mock, i) => (
                   <div
@@ -99,7 +99,7 @@ export function FeatureScroll({ dict }: { dict: Dict["featureScroll"] }) {
                   ref={(el) => {
                     stepRefs.current[i] = el;
                   }}
-                  className="border-t border-line py-10 first:border-0 first:pt-0 lg:flex lg:min-h-[52vh] lg:flex-col lg:justify-center lg:border-0 lg:py-8"
+                  className="border-t border-line py-10 first:border-0 first:pt-0 lg:flex lg:min-h-[38vh] lg:flex-col lg:justify-center lg:border-0 lg:py-6"
                 >
                   {/* Visuel inline (mobile) */}
                   <div className="mb-7 flex justify-center lg:hidden">
