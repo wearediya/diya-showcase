@@ -6,7 +6,7 @@ import { pageSeo, SITE_URL } from "@/lib/seo";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { LocalReality } from "@/components/sections/LocalReality";
-import { Priority } from "@/components/sections/Priority";
+import { FeatureScroll } from "@/components/sections/FeatureScroll";
 import { Split } from "@/components/sections/Split";
 import { Proof } from "@/components/sections/Proof";
 import { GreenBanner } from "@/components/sections/GreenBanner";
@@ -78,7 +78,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
       <main>
         <Hero dict={dict.hero} units={dict.units} />
         <LocalReality dict={dict.local} />
-        <Priority dict={dict.priority} />
+        <FeatureScroll dict={dict.featureScroll} />
         <Split dict={dict.split} />
         <Proof dict={dict.proof} />
         <GreenBanner dict={dict.banner} units={dict.units} />

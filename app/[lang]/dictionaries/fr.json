@@ -52,27 +52,63 @@
       }
     ]
   },
-  "priority": {
+  "featureScroll": {
     "title": "Une longueur d'avance pour les bailleurs",
     "subtitle": "Diya réunit tout ce qu'il faut pour piloter votre patrimoine locatif — sans tableur ni paperasse.",
-    "cards": [
+    "steps": [
       {
-        "title": "Suivi des loyers",
-        "desc": "Encaissements, retards et quittances en un coup d'œil.",
-        "stat": "98 %",
-        "statLabel": "loyers à jour"
+        "title": "Votre patrimoine, structuré",
+        "desc": "Vos immeubles, logements et boutiques réunis au même endroit, avec leur statut et leur taux d'occupation en un coup d'œil.",
+        "bullets": [
+          "Biens, logements et types",
+          "Statut vacant / occupé",
+          "Taux d'occupation en direct"
+        ]
       },
       {
-        "title": "Trésorerie",
-        "desc": "Entrées et sorties de caisse consolidées par bien.",
-        "stat": "1,25 M",
-        "statLabel": "FCFA ce mois"
+        "title": "Locataires & baux",
+        "desc": "Chaque locataire avec son bail, son logement et son loyer. Retrouvez tout son historique en deux tapes.",
+        "bullets": [
+          "Fiches locataires complètes",
+          "Baux et échéances",
+          "Historique des paiements"
+        ]
       },
       {
-        "title": "Taux d'occupation",
-        "desc": "Logements occupés, vacants et réservés en temps réel.",
-        "stat": "37",
-        "statLabel": "logements suivis"
+        "title": "Loyers encaissés, zéro oubli",
+        "desc": "Encaissez en espèces, mobile money, virement ou carte, et laissez Diya relancer les loyers en retard.",
+        "bullets": [
+          "Plusieurs moyens de paiement",
+          "Relances des impayés",
+          "Suivi mois par mois"
+        ]
+      },
+      {
+        "title": "Quittances pro, infalsifiables",
+        "desc": "Générez une quittance PDF soignée, signée et vérifiable par QR code. Scannez aussi vos reçus papier.",
+        "bullets": [
+          "Quittances PDF à imprimer ou partager",
+          "Signature + QR de vérification",
+          "Scan de reçus"
+        ]
+      },
+      {
+        "title": "Dépenses & trésorerie",
+        "desc": "Notez chaque dépense par bien et gardez votre caisse à jour, sans tableur.",
+        "bullets": [
+          "Dépenses par bien ou locataire",
+          "Solde de caisse en temps réel",
+          "Tout reste sur votre appareil"
+        ]
+      },
+      {
+        "title": "Pilotage & tranquillité",
+        "desc": "Chiffre d'affaires, occupation, multi-devises — le tout 100 % hors-ligne, chiffré et sauvegardé.",
+        "bullets": [
+          "Statistiques CA & occupation",
+          "Multi-devises",
+          "Hors-ligne, chiffré, sauvegarde Drive"
+        ]
       }
     ]
   },

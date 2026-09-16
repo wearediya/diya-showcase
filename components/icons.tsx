@@ -178,6 +178,28 @@ export const Moon = (p: IconProps) => (
   </svg>
 );
 
+export const User = (p: IconProps) => (
+  <svg {...base(p)}>
+    <circle cx="12" cy="8" r="4" />
+    <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" />
+  </svg>
+);
+
+export const Lock = (p: IconProps) => (
+  <svg {...base(p)}>
+    <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" />
+    <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 15v2" />
+  </svg>
+);
+
+export const Coins = (p: IconProps) => (
+  <svg {...base(p)}>
+    <ellipse cx="9" cy="7" rx="6" ry="3" />
+    <path d="M3 7v5c0 1.66 2.69 3 6 3s6-1.34 6-3M15 10.5c2.5.3 4 1.3 4 2.5 0 1.66-2.69 3-6 3-1 0-1.95-.12-2.78-.34" />
+    <path d="M3 12v5c0 1.66 2.69 3 6 3 1 0 1.95-.12 2.78-.34" />
+  </svg>
+);
+
 export const Menu = (p: IconProps) => (
   <svg {...base(p)}>
     <path d="M4 7h16M4 12h16M4 17h16" />
