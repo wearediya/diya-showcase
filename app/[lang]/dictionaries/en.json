@@ -52,27 +52,63 @@
       }
     ]
   },
-  "priority": {
+  "featureScroll": {
     "title": "A head start for landlords",
     "subtitle": "Diya brings together everything you need to run your rental portfolio — no spreadsheets, no paperwork.",
-    "cards": [
+    "steps": [
       {
-        "title": "Rent tracking",
-        "desc": "Payments, arrears and receipts at a glance.",
-        "stat": "98%",
-        "statLabel": "rent up to date"
+        "title": "Your portfolio, structured",
+        "desc": "Your buildings, units and shops in one place, with their status and occupancy at a glance.",
+        "bullets": [
+          "Properties, units and types",
+          "Vacant / occupied status",
+          "Live occupancy rate"
+        ]
       },
       {
-        "title": "Cash flow",
-        "desc": "Money in and out, consolidated per property.",
-        "stat": "1.25M",
-        "statLabel": "CFA this month"
+        "title": "Tenants & leases",
+        "desc": "Every tenant with their lease, unit and rent. Pull up their whole history in two taps.",
+        "bullets": [
+          "Complete tenant profiles",
+          "Leases and due dates",
+          "Payment history"
+        ]
       },
       {
-        "title": "Occupancy rate",
-        "desc": "Occupied, vacant and reserved units in real time.",
-        "stat": "37",
-        "statLabel": "units tracked"
+        "title": "Rent collected, nothing missed",
+        "desc": "Collect in cash, mobile money, transfer or card, and let Diya chase overdue rent.",
+        "bullets": [
+          "Several payment methods",
+          "Overdue reminders",
+          "Month-by-month tracking"
+        ]
+      },
+      {
+        "title": "Pro receipts, tamper-proof",
+        "desc": "Generate a clean PDF receipt, signed and verifiable by QR code. Scan your paper receipts too.",
+        "bullets": [
+          "Printable / shareable PDF receipts",
+          "Signature + QR verification",
+          "Receipt scanning"
+        ]
+      },
+      {
+        "title": "Expenses & cash flow",
+        "desc": "Log every expense by property and keep your cash box up to date — no spreadsheet.",
+        "bullets": [
+          "Expenses by property or tenant",
+          "Real-time cash balance",
+          "Everything stays on your device"
+        ]
+      },
+      {
+        "title": "Insights & peace of mind",
+        "desc": "Revenue, occupancy, multi-currency — all 100% offline, encrypted and backed up.",
+        "bullets": [
+          "Revenue & occupancy stats",
+          "Multi-currency",
+          "Offline, encrypted, Drive backup"
+        ]
       }
     ]
   },
