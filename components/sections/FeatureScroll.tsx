@@ -99,7 +99,7 @@ export function FeatureScroll({ dict }: { dict: Dict["featureScroll"] }) {
                   ref={(el) => {
                     stepRefs.current[i] = el;
                   }}
-                  className="border-t border-line py-12 first:border-0 first:pt-0 lg:flex lg:min-h-[72vh] lg:flex-col lg:justify-center lg:border-0 lg:py-0"
+                  className="border-t border-line py-10 first:border-0 first:pt-0 lg:flex lg:min-h-[52vh] lg:flex-col lg:justify-center lg:border-0 lg:py-8"
                 >
                   {/* Visuel inline (mobile) */}
                   <div className="mb-7 flex justify-center lg:hidden">
@@ -111,10 +111,7 @@ export function FeatureScroll({ dict }: { dict: Dict["featureScroll"] }) {
                       active === i ? "lg:opacity-100" : "lg:opacity-40"
                     }`}
                   >
-                    <span className="inline-flex items-center rounded-full bg-mint/60 px-3 py-1 text-[12px] font-bold tabular-nums text-brand-ink">
-                      {String(i + 1).padStart(2, "0")} / {steps.length}
-                    </span>
-                    <h3 className="mt-3 text-[26px] font-extrabold tracking-tight text-ink sm:text-[30px]">
+                    <h3 className="text-[26px] font-extrabold tracking-tight text-ink sm:text-[30px]">
                       {s.title}
                     </h3>
                     <p className="mt-2.5 max-w-md text-[16px] leading-7 text-muted">
