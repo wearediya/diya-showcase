@@ -4,6 +4,40 @@ import { notFound } from "next/navigation";
 
 import "../globals.css";
 import { getDictionary, hasLocale, locales } from "./dictionaries";
+import { SITE_URL } from "@/lib/seo";
+
+const keywords: Record<string, string[]> = {
+  fr: [
+    "gestion locative",
+    "application de gestion locative",
+    "logiciel de gestion locative",
+    "gestion des biens",
+    "locataires",
+    "loyers",
+    "quittances de loyer",
+    "reçus",
+    "hors-ligne",
+    "multi-devises",
+    "Afrique de l'Ouest",
+    "Togo",
+    "propriétaire",
+    "gestionnaire immobilier",
+  ],
+  en: [
+    "rental management",
+    "rental management app",
+    "property management software",
+    "landlord app",
+    "tenants",
+    "rent",
+    "rent receipts",
+    "offline",
+    "multi-currency",
+    "West Africa",
+    "Togo",
+    "property manager",
+  ],
+};
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -28,9 +62,27 @@ export async function generateMetadata({
   if (!hasLocale(lang)) return {};
   const dict = await getDictionary(lang);
   return {
+    metadataBase: new URL(SITE_URL),
     title: dict.meta.title,
     description: dict.meta.description,
     applicationName: "Diya",
+    keywords: keywords[lang],
+    authors: [{ name: "Diya" }],
+    creator: "Diya",
+    publisher: "Diya",
+    category: "business",
+    formatDetection: { telephone: false, address: false, email: false },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,

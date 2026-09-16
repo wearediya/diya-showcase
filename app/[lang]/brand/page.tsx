@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getDictionary, hasLocale } from "../dictionaries";
+import { pageSeo } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/sections/Header";
 import { PageHero } from "@/components/sections/PageHero";
@@ -18,7 +19,12 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!hasLocale(lang)) return {};
   const b = brand[lang];
-  return { title: b.metaTitle, description: b.metaDescription };
+  return pageSeo({
+    lang,
+    path: "/brand",
+    title: b.metaTitle,
+    description: b.metaDescription,
+  });
 }
 
 const previewBg = {

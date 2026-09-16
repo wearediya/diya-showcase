@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Diya — Simple rental management, even offline",
-    "description": "Diya is the mobile rental-management app for landlords and property managers in West Africa: units, tenants, rent, expenses, bookings and receipts — 100% offline, in CFA francs."
+    "description": "Diya is the mobile rental-management app for landlords and property managers in West Africa: units, tenants, rent, expenses, bookings and receipts — 100% offline and multi-currency."
   },
   "nav": {
     "home": "Home",
